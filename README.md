@@ -38,14 +38,17 @@ Wireframe mockups, created using [Balsamiq](https://balsamiq.com/), are availabl
 
  1. Laptop
     1. [Landing](static/img/wireframes/landing/LandingLaptop.pdf)
+    1. [Tour](static/img/wireframes/tour/TourLaptop.pdf)
     1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainLaptop.pdf)
     1. [Checkout Details](static/img/wireframes/checkout/CheckoutDetailsLaptop.pdf)
  1. Tablet
      1. [Landing](static/img/wireframes/landing/LandingTablet.pdf)
+     1. [Tour](static/img/wireframes/tour/TourTablet.pdf)
      1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainTablet.pdf)
      1. [Checkout Details](static/img/wireframes/checkout/CheckoutDetailsTablet.pdf)
  1. Mobile
      1. [Landing](static/img/wireframes/landing/LandingMobile.pdf)
+     1. [Tour](static/img/wireframes/tour/TourMobile.pdf)
      1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainMobile.pdf)
      1. [Checkout Details](static/img/wireframes/checkout/CheckoutDetailsMobile.pdf)
 
