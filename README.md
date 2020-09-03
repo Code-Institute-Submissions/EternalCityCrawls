@@ -1,5 +1,5 @@
 # EternalCityCrawls
-Half/Full Day Tour of Rome developed by Django
+Half/Full Day Tour of Rome developed on Django
 
 ## Table of contents
 <!--ts-->
