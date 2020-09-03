@@ -44,5 +44,10 @@ Wireframe mockups, created using [Balsamiq](https://balsamiq.com/), are availabl
  1. Mobile
      1. [Landing](static/img/wireframes/landing/LandingMobile.pdf)
 
+Modals not dependent on the device:
+
+   1. [Log in](wireframes/login/login.pdf)
+   1. [Register](wireframes/login/registration.pdf)
+
 
 
