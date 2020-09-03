@@ -25,4 +25,10 @@ User goals:
 - Read Previous Customer's feedbacks.
 - Receive information about the status of his/her payment.
 
+## Design
+
+### Color Scheme
+Following color Palette has been adopted; the main background color used is Panache(`#F1FAEE`) or Conch(`#A8ADAC`) as an alternative; those two colours are dominating the application. Other Elements, such Button and Navbar are using Nordic (`#1D3537`) or a gradient of it with Jelly Bean(`#457B9D`). Amaranth(`#E63946`) has been used as an element of contrast, in the footer or for some button.
+
+![Color Palette](static/img/ECC_palette.png)
 
