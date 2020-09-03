@@ -32,3 +32,17 @@ Following color Palette has been adopted; the main background color used is Pana
 
 ![Color Palette](static/img/ECC_palette.png)
 
+## Wireframes
+
+Wireframe mockups, created using [Balsamiq](https://balsamiq.com/), are available in diffent format:
+
+ 1. Laptop
+    1. [Landing](static/img/wireframes/landing/LandingLaptop.pdf)
+ 1. Tablet
+     1. [Landing](static/img/wireframes/landing/LandingTablet.pdf)
+
+ 1. Mobile
+     1. [Landing](static/img/wireframes/landing/LandingMobile.pdf)
+
+
+
