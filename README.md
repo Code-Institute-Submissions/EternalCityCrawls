@@ -38,16 +38,19 @@ Wireframe mockups, created using [Balsamiq](https://balsamiq.com/), are availabl
 
  1. Laptop
     1. [Landing](static/img/wireframes/landing/LandingLaptop.pdf)
+    1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainLaptop.pdf)
  1. Tablet
      1. [Landing](static/img/wireframes/landing/LandingTablet.pdf)
-
+     1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainTablet.pdf)
  1. Mobile
      1. [Landing](static/img/wireframes/landing/LandingMobile.pdf)
+     1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainMobile.pdf)
+
 
 Modals not dependent on the device:
 
-   1. [Log in](wireframes/login/login.pdf)
-   1. [Register](wireframes/login/registration.pdf)
+   1. [Log in](static/img/wireframes/login/login.pdf)
+   1. [Register](static/img/wireframes/login/registration.pdf)
 
 
 
