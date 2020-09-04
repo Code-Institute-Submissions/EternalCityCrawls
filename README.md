@@ -37,23 +37,23 @@ Following color Palette has been adopted; the main background color used is Pana
 Wireframe mockups, created using [Balsamiq](https://balsamiq.com/), are available in diffent format:
 
  1. Laptop
-    1. [Landing](static/img/wireframes/landing/LandingLaptop.pdf)
-    1. [Seach](static/img/wireframes/search/SearchLaptop.pdf)
-    1. [Tour](static/img/wireframes/tour/TourLaptop.pdf)
-    1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainLaptop.pdf)
-    1. [Checkout Details](static/img/wireframes/checkout/CheckoutDetailsLaptop.pdf)
+    1. [Landing](wireframes/landing/LandingLaptop.pdf)
+    1. [Seach](wireframes/search/SearchLaptop.pdf)
+    1. [Tour](wireframes/tour/TourLaptop.pdf)
+    1. [Checkout Main](wireframes/checkout/CheckoutMainLaptop.pdf)
+    1. [Checkout Details](wireframes/checkout/CheckoutDetailsLaptop.pdf)
  1. Tablet
-     1. [Landing](static/img/wireframes/landing/LandingTablet.pdf)
-     1. [Search](static/img/wireframes/search/SearchTablet.pdf)
-     1. [Tour](static/img/wireframes/tour/TourTablet.pdf)
-     1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainTablet.pdf)
-     1. [Checkout Details](static/img/wireframes/checkout/CheckoutDetailsTablet.pdf)
+     1. [Landing](wireframes/landing/LandingTablet.pdf)
+     1. [Search](wireframes/search/SearchTablet.pdf)
+     1. [Tour](wireframes/tour/TourTablet.pdf)
+     1. [Checkout Main](wireframes/checkout/CheckoutMainTablet.pdf)
+     1. [Checkout Details](wireframes/checkout/CheckoutDetailsTablet.pdf)
  1. Mobile
-     1. [Landing](static/img/wireframes/landing/LandingMobile.pdf)
-     1. [Search](static/img/wireframes/search/SearchMobile.pdf)
-     1. [Tour](static/img/wireframes/tour/TourMobile.pdf)
-     1. [Checkout Main](static/img/wireframes/checkout/CheckoutMainMobile.pdf)
-     1. [Checkout Details](static/img/wireframes/checkout/CheckoutDetailsMobile.pdf)
+     1. [Landing](wireframes/landing/LandingMobile.pdf)
+     1. [Search](wireframes/search/SearchMobile.pdf)
+     1. [Tour](wireframes/tour/TourMobile.pdf)
+     1. [Checkout Main](wireframes/checkout/CheckoutMainMobile.pdf)
+     1. [Checkout Details](wireframes/checkout/CheckoutDetailsMobile.pdf)
 
 
 Modals not dependent on the device:
