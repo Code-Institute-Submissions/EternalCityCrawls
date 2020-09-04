@@ -25,7 +25,7 @@ SECRET_KEY = 'z2m_=*bg(@ywk!mk)8^&8a8fct+&-d8mazvh$zu&%x*fphg9bd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eternal-city-crawls.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
