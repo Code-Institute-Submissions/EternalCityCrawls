@@ -61,5 +61,32 @@ Modals not dependent on the device:
    1. [Log in](static/img/wireframes/login/login.pdf)
    1. [Register](static/img/wireframes/login/registration.pdf)
 
+## Deployment
+
+### Deploying to Heroku:
+
+* 1: <strong>Create</strong> a requirements.txt file using the following command.
+```bash
+pip3 freeze > requirements.txt
+```
+
+* 2: <strong>Create</strong> a procfile with the following command.
+```bash
+echo web: python3 app.py > Procfile
+```
+* 3: Push these newly created files to your repository.
+* 4: Create a new app for this project on the Heroku Dashboard.
+* 5: Select your deployment method by clicking on the deployment method button and select GitHub.
+* 6: On the dashboard, set the following config variables:
+
+**Key**|**Value**
+:-----:|:-----:
+
+
+* 7: <strong>Click</strong> the deploy button on the heroku Dashboard.
+* 8: Wait for the build to finish and click the view project link once it has!
+
+
+
 
 
