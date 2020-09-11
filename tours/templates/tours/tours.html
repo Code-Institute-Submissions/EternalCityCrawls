@@ -25,6 +25,7 @@
                     {% for tour in tours %}
                         <div class="col-sm-6 col-md-6 col-lg-3 col-xl-4">
                             <div class="card h-100 border-0">
+                                {{tour}}
                                 {% if tour.image %}
                                 <a href="{% url 'tour_details' tour.id %}">
                                     <img class="card-img-top img-fluid" src="{{ tour.image.url }}" alt="{{ tour.name }}">

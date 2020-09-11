@@ -40,7 +40,7 @@ def tour_detail(request, tour_id):
 
 
     context = {
-        'tours': tour,
+        'tour': tour,
 
     }
 
