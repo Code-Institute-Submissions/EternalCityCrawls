@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     # my apps
     'home',
-    'tours'
+    'tours',
 
 ]
 
