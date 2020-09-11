@@ -31,3 +31,17 @@ def all_tours(request):
     }
 
     return render(request, 'tours/tours.html', context)
+
+
+def tour_detail(request, tour_id):
+    """ A view to show the details of a specific tour """
+
+    tour = get_object_or_404(Tour,pk=tour_id)
+
+
+    context = {
+        'tours': tour,
+
+    }
+
+    return render(request, 'tours/tour_details.html', context)
