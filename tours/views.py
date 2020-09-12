@@ -13,6 +13,7 @@ def all_tours(request):
     tours = Tour.objects.all()
     query = None
     sort = None
+    direction = None
     categories = None
 
 
