@@ -61,6 +61,8 @@ body {
     background: #000 !important;
 }
 
+/* overlay background image */
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -71,9 +73,24 @@ body {
     z-index: -1;
 }
 
+/* hover effect on category button */
+
 a.category-badge > span.badge:hover{
     background: #212529 !important;
     color: #fff !important;
+}
+
+/* going to the top button */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+}
+.btt-link{
+    cursor: pointer;
 }
 
 /* --------------------------------- Media queries */
