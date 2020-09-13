@@ -44,11 +44,31 @@
                                 <p class="mt-3"><strong>Participants:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="participants" value="1" min="1" max="99" data-item_id="{{ tour.id }}" id="id_qty_{{ tour.id }}">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-black rounded-0" 
+                                                data-item_id="{{ tour.id }}" id="decrement-qty_{{ tour.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control qty_input" type="number"
+                                            name="participants" value="1" min="1" max="15"
+                                            data-item_id="{{ tour.id }}"
+                                            id="id_qty_{{ tour.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-black rounded-0"
+                                                data-item_id="{{ tour.id }}" id="increment-qty_{{ tour.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
+                                </div>
                             </div>
-
+                            <!-- include here code to manage time of the booking -->
                             <div class="col-12">
                                 <a href="{% url 'tours' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
@@ -65,5 +85,13 @@
             </div>
         </div>
     </div>
+
+{% endblock %}
+
+{% block corejs %}
+{{ block.super }}
+
+
+<script src="{% static 'js/tour-details.js' %}"></script>
 
 {% endblock %}
