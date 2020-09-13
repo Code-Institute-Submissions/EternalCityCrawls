@@ -26,7 +26,6 @@ def cart_contents(request):
         'cart_items': cart_items,
         'total': total,
         'tour_count': tour_count,
-
     }
 
     return context
