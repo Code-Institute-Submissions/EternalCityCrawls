@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
+
+from tours.models import Tour
 
 # Create your views here.
 
@@ -28,6 +31,7 @@ def add_to_cart(request, item_id):
 def update_cart(request, item_id):
     """update participants in cart"""
 
+    tour = Tour.objects.get(pk=item_id)
     participants = int(request.POST.get('participants'))
 
     cart = request.session.get('cart', {})
@@ -37,6 +41,7 @@ def update_cart(request, item_id):
         cart[item_id] = participants
     else:
         cart.pop(item_id)
+        messages.success(request, f"{tour.name} added to the cart")
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
