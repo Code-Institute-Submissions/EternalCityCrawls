@@ -15,6 +15,7 @@ def cart_contents(request):
     for item_id, participants in cart.items():
         tour = get_object_or_404(Tour, pk=item_id)
         total += participants * tour.cost
+        tour_count += participants
         cart_items.append({
             'item_id': item_id,
             'participants': participants,
