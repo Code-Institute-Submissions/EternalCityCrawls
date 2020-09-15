@@ -13,6 +13,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add Participants of the specified Tour to the cart"""
 
+    tour = Tour.objects.get(pk=item_id)
     participants = int(request.POST.get('participants'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -23,6 +24,8 @@ def add_to_cart(request, item_id):
         cart[item_id] += participants
     else:
         cart[item_id] = participants
+        messages.success(request, f"{tour.name} added to the cart")
+
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -31,7 +34,6 @@ def add_to_cart(request, item_id):
 def update_cart(request, item_id):
     """update participants in cart"""
 
-    tour = Tour.objects.get(pk=item_id)
     participants = int(request.POST.get('participants'))
 
     cart = request.session.get('cart', {})
@@ -41,7 +43,6 @@ def update_cart(request, item_id):
         cart[item_id] = participants
     else:
         cart.pop(item_id)
-        messages.success(request, f"{tour.name} added to the cart")
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
