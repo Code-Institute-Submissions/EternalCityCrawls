@@ -36,7 +36,7 @@
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'tour_detail' item.tour.id %}">
+                            <a href="{% url 'tour_details' item.tour.id %}">
                                 {% if item.tour.image %}
                                     <img class="w-100" src="{{ item.tour.image.url }}" alt="{{ tour.name }}">
                                 {% else %}
