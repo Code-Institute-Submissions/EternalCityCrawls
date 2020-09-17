@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
 
+    #forms
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -61,6 +64,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'eternal_city_crawls.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 TEMPLATES = [
     {
@@ -78,6 +84,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages', #message processor
                 'cart.context.cart_contents' #cart context processor
             ],
+        'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
