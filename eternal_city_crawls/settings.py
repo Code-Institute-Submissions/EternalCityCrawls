@@ -82,6 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth', # required by allauth
                 'django.contrib.messages.context_processors.messages', #message processor
+                'django.template.context_processors.media', # media processor
                 'cart.context.cart_contents' #cart context processor
             ],
         'builtins': [
