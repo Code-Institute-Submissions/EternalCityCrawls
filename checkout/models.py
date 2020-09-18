@@ -4,7 +4,10 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
+
 from tours.models import Tour
+
+
 
 
 class Order(models.Model):
@@ -41,10 +44,9 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time a line item is added,
-        accounting for delivery costs.
+        Update grand total each time a line item is added
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
 
         self.save()
 
@@ -63,4 +65,4 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.tour.name} on order {self.order.order_number}'
+        return f'{self.tour.name} on order {self.order.order_number}'

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
@@ -7,6 +7,8 @@ import stripe
 
 # Create your views here.
 from .forms import OrderForm
+from .models import Order, OrderLineItem
+from tours.models import Tour
 from cart.context import cart_contents
 
 
@@ -15,10 +17,49 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    cart = request.session.get('cart', {})
-    if not cart:
-        messages.error(request, "There's nothing in your cart at the moment")
-        return redirect(reverse('tours'))
+    if request.method == 'POST':
+        cart = request.session.get('cart', {})
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'country': request.POST['country'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'county': request.POST['county'],
+        }
+        
+        order_form = OrderForm(form_data)
+        if order_form.is_valid():
+            order = order_form.save()
+            for item_id, item_data in cart.items():
+                try:
+                    tour = Tour.objects.get(id=item_id)
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        tour=tour,
+                        participants=item_data,
+                    )
+                    order_line_item.save()
+        
+                except Tour.DoesNotExist:
+                    messages.error(request, (
+                        "One of the Tour in your cart wasn't found in our database. ")
+                    )
+                    order.delete()
+                    return redirect(reverse('view_cart'))
+
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('checkout_success', args=[order.order_number]))
+        else:
+            messages.error(request, 'There was an error with your form. Please double check your information.')
+    else:
+        cart = request.session.get('cart', {})
+        if not cart:
+            messages.error(request, "There's nothing in your cart at the moment")
+            return redirect(reverse('tours'))
 
     current_cart = cart_contents(request)
     total = current_cart['total']
@@ -40,4 +81,22 @@ def checkout(request):
 
     return render(request, template, context)
 
-# Create your views here.
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'cart' in request.session:
+        del request.session['cart']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+    }
+
+    return render(request, template, context)
