@@ -177,7 +177,7 @@ a.category-badge > span.badge:hover{
     overflow-y: auto;
 }
 
-/* Check out form styling */
+/* Check out form styling default Stripe*/
 
 .StripeElement,
 .stripe-style-input {
