@@ -237,6 +237,16 @@ a.category-badge > span.badge:hover{
     margin: 0;
     height: 100%;
 }
+/*---styling drop box ---*/
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
 
 /* --------------------------------- Media queries */
 
