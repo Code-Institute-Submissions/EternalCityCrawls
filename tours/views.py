@@ -80,8 +80,9 @@ def add_tour(request):
         form = TourForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            tour = form.save()
             messages.success(request, 'Successfully added Tour!')
-            return redirect(reverse('add_tour'))
+            return redirect(reverse('tour_detail', args=[tour.id]))
         else:
             messages.error(request, 'Failed to add tour. Please ensure the form is valid.')
     else:
@@ -117,3 +118,10 @@ def update_tour(request, tour_id):
     print('here 2')
 
     return render(request, template, context)
+
+def delete_tour(request, tour_id):
+    """ Delete a product from the store """
+    tour = get_object_or_404(Tour, pk=tour_id)
+    tour.delete()
+    messages.success(request, 'Tour deleted!')
+    return redirect(reverse('tours'))
