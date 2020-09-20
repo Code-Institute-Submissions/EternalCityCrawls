@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Tour, Category
+from .forms import TourForm
 
 # Create your views here.
 
@@ -72,3 +73,13 @@ def tour_detail(request, tour_id):
     }
 
     return render(request, 'tours/tour_details.html', context)
+
+def add_tour(request):
+    """ Add a product to the store """
+    form = TourForm()
+    template = 'tours/add_tour.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
