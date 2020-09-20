@@ -181,19 +181,11 @@
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
-                {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-                        <span class="icon mr-2">
-                            <i class="fas fa-angle-left"></i>
-                        </span>
-                        <span class="text-uppercase">Back to Profile</span>
-                    </a>
-                {% else %}
                 <a href="{% url 'tours' %}?category=photography" class="btn btn-black rounded-0 my-2">
                     <span class="icon mr-2">
                         <i class="fas fa-gifts"></i>
                     </span>
-                    <span class="text-uppercase">Now check out Photographic Tours</span>
+                    <span class="text-uppercase">Now check out Photograpy Tour</span>
                 </a>
                 {% endif %}
 			</div>
