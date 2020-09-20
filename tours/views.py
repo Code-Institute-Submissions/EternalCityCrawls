@@ -1,6 +1,7 @@
 
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Tour, Category
@@ -74,6 +75,7 @@ def tour_detail(request, tour_id):
 
     return render(request, 'tours/tour_details.html', context)
 
+@login_required
 def add_tour(request):
     """ Add a Tour to the catalogue """
     if request.method == 'POST':
@@ -94,6 +96,7 @@ def add_tour(request):
 
     return render(request, template, context)
 
+@login_required
 def update_tour(request, tour_id):
     """ Update a tour in the catalogue """
     print('here')
@@ -119,6 +122,7 @@ def update_tour(request, tour_id):
 
     return render(request, template, context)
 
+@login_required
 def delete_tour(request, tour_id):
     """ Delete a product from the store """
     tour = get_object_or_404(Tour, pk=tour_id)
