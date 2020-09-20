@@ -1,5 +1,7 @@
 from django import forms
 from .models import Tour, Category
+from .widget import CustomClearableFileInput
+
 
 
 class TourForm(forms.ModelForm):
@@ -7,6 +9,8 @@ class TourForm(forms.ModelForm):
     class Meta:
         model = Tour
         fields = '__all__'
+
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
