@@ -75,8 +75,17 @@ def tour_detail(request, tour_id):
     return render(request, 'tours/tour_details.html', context)
 
 def add_tour(request):
-    """ Add a product to the store """
-    form = TourForm()
+    """ Add a Tour to the catalogue """
+    if request.method == 'POST':
+        form = TourForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added Tour!')
+            return redirect(reverse('add_tour'))
+        else:
+            messages.error(request, 'Failed to add tour. Please ensure the form is valid.')
+    else:
+        form = TourForm()
     template = 'tours/add_tour.html'
     context = {
         'form': form,
