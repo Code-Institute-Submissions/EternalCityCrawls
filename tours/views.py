@@ -88,7 +88,7 @@ def add_tour(request):
             form.save()
             tour = form.save()
             messages.success(request, 'Successfully added Tour!')
-            return redirect(reverse('tour_detail', args=[tour.id]))
+            return redirect(reverse('tour_details', args=[tour.id]))
         else:
             messages.error(request, 'Failed to add tour. Please ensure the form is valid.')
     else:
