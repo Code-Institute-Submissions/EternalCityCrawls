@@ -1,1 +1,1 @@
-web: gunicorn eternal_city_crawls.wsgi
+web: gunicorn eternal_city_crawls.wsgi:application
