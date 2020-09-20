@@ -78,6 +78,10 @@ def tour_detail(request, tour_id):
 @login_required
 def add_tour(request):
     """ Add a Tour to the catalogue """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Tour Manager can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = TourForm(request.POST, request.FILES)
         if form.is_valid():
@@ -99,7 +103,10 @@ def add_tour(request):
 @login_required
 def update_tour(request, tour_id):
     """ Update a tour in the catalogue """
-    print('here')
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Tour Manager can do that.')
+        return redirect(reverse('home'))
+
     tour = get_object_or_404(Tour, pk=tour_id)
     if request.method == 'POST':
         form = TourForm(request.POST, request.FILES, instance=tour)
@@ -118,13 +125,14 @@ def update_tour(request, tour_id):
         'form': form,
         'tour': tour,
     }
-    print('here 2')
-
     return render(request, template, context)
 
 @login_required
 def delete_tour(request, tour_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Tour Manager can do that.')
+        return redirect(reverse('home'))
     tour = get_object_or_404(Tour, pk=tour_id)
     tour.delete()
     messages.success(request, 'Tour deleted!')
