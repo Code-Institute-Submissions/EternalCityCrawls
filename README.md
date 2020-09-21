@@ -61,6 +61,53 @@ Modals not dependent on the device:
    1. [Log in](static/img/wireframes/login/login.pdf)
    1. [Register](static/img/wireframes/login/registration.pdf)
 
+## Data Model
+
+The user model used in this project is that which is provided by Django, click <a href="https://docs.djangoproject.com/en/3.0/ref/contrib/auth/">here</a> to read more about those tables.
+
+#### The Tour Table:
+
+The tour table within the app of identical name holds the following data for the tours available in Eternal City Crawls.
+
+**Name**|**Key in db**|**Validation**|**Field Type**
+:-----:|:-----:|:-----:|:-----:
+Name|name|max\_length=254, default=''"|CharField
+Grind Size|grind\_size|max\_length=20, choices=GRIND\_OPTIONS, default=FINE,|CharField
+Excerpt|excerpt|max\_length=30, default='some string'|TextField
+Description|description|default='some string'|TextField
+Description2|description2|default='some string'|TextField
+Promoted|promoted|default=False|BooleanField
+Image|image|upload\_to="static/images"|ImageField
+Cost|cost|max\_digits=6, decimal\_places=2|DecimalField
+RRP|recommended\_retail\_price|max\_digits=6, decimal\_places=2, default=0.0|DecimalField
+
+#### The Order Table:
+
+The Order Table☕️.
+
+**Name**|**Key in db**|**Validation**|**Field Type**
+:-----:|:-----:|:-----:|:-----:
+User|user|User, on\_delete=models.PROTECT|ForeignKey
+Full Name|full\_name|max\_length=50, blank=False|CharField
+Phone Number|phone\_number|max\_length=20, blank=False|CharField
+Country|country|max\_length=40, blank=False|CharField
+Postcode|postcode|max\_length=40, blank=False|CharField
+City|city|max\_length=40, blank=False|CharField
+Address Line 1|address\_line\_1|max\_length=40, blank=False|CharField
+Address Line 2|address\_line\_2|max\_length=40, blank=False|CharField
+Date|date| |DateField
+
+#### The OrderItem Table:
+
+The OrderItem model within the checkout app holds the following data for the OrderItem(s) in The Coffee Shop ☕️.
+
+**Name**|**Key in db**|**Validation**|**Field Type**
+:-----:|:-----:|:-----:|:-----:
+Order|order|Order, null=False|ForeignKey
+Tour|tour|tour, null=False|ForeignKey
+Participants|participants|blank=False|IntegerField
+
+
 ## Deployment
 
 ### Deploying to Heroku:
