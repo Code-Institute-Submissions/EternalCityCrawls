@@ -10,20 +10,20 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    Welcome to Eternal City Crawls
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'tours' %}" class="shop-now-button btn btn-ls rounded-0 text-uppercase py-3">Book Now</a>
-                    </h4>
-                </div>
-            </div>    
-        </div>
+<!-- Header -->
+<header class="master-head text-white text-center landing" id="landing">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <h1 class="mb-5"> Welcome to Eternal City Crawls
+        </h1>
+      </div>
     </div>
+    <!-- Search Bar -->
+    <a href="{% url 'tours' %}" class="shop-now-button btn btn-ls rounded-0 text-uppercase py-3">Book Now</a>
+  </div>
+</header>
 
     <section class="hot" id="hot">
         <div class="top-content">
