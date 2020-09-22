@@ -1,0 +1,43 @@
+<!-- footer -->
+<footer class="footer">
+    <div class="footer__nav">
+        <div class="container">
+            <section class="row">
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="footer__nav__group">
+                        <h4 class="footer__nav__group__header">Eternal City Crawls</h4>
+                        <ul class="footer__nav__group__list">
+                            <li class="footer__nav__group__list__item"><a aria-label="home" href="{% url 'home' %}">Home</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="shop" href="/tours">Booking</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="about-us" href="">About Us</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="contact-us" href="">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="footer__nav__group">
+                        <h4 class="footer__nav__group__header">Account</h4>
+                        <ul class="footer__nav__group__list">
+                            {% if user.is_authenticated %}
+                            <li class="footer__nav__group__list__item"><a aria-label="my profile" href="{% url 'profile' %}">My Profile</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="sign out" href="{% url 'account_logout' %}">Sign Out</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="your cart" href="{% url 'view_cart' %}">Your Cart</a></li>
+                            {% else %}
+                            <li class="footer__nav__group__list__item"><a aria-label="register" href="{% url 'account_signup' %}">Register</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="sign in" href="{% url 'account_login' %}">Sign In</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-md-2 col-sm-12">
+                    <div class="footer__message">
+                        <a aria-label="home" href="/">
+                            <img class="logo" src="/static/images/logo/logo-sm.png" alt="ECC Logo">
+                        </a>
+                        <p>Thanks for visiting Eternal City Crawls</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</footer>
