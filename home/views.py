@@ -8,10 +8,10 @@ def home(request):
     )
 
 def error_404_view(request,exception):
-    return render(request,'404.html')
+    return render(request,'home/404.html')
 
 
 def error_500_view(request):
-    return render(request,'500.html')
+    return render(request,'home/500.html')
 
 
