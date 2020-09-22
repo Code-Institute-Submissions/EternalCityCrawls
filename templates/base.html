@@ -15,6 +15,10 @@
 
     {% include 'includes/footer.html' %}
     {% include 'includes/script.html' %}
+    
+    {% block extra_js %}
+      <script src="{% static 'js/base.js' %}"></script>
+    {% endblock %}
 
   
 </body>
