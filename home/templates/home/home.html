@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-contianer">
+    <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -24,5 +24,46 @@
             </div>    
         </div>
     </div>
+
+    <section class="hot" id="hot">
+        <div class="top-content">
+          <div class="section-heading text-center">
+            <h2>See Our Top Rated Tours</h2>
+            <p class="text-muted">experience what our clients liked the most</p>
+            <hr>
+          </div>
+          <div class="container-fluid">
+            <div id="carousel-hot" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner carousel-inner-hot row w-100 mx-auto" role="listbox">
+                {% for tour in tours %}
+                <div
+                  class="carousel-item item-hot col-12 col-sm-6 col-md-4 col-lg-3 {% if forloop.counter == 1 %} active {% endif %}">
+
+                  <a href="{% url 'tour_details' tour.id %}" class="no-underline">
+                    <div class="card card-game" data-toggle="tooltip" data-placement="top" title="{{ tour.name }}">
+                        <div class="card-header">
+                            <h5 class=" text-center text-truncate">{{ tour.name}}</h5>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-top img-fluid p-2" src="{{  tour.image.url }}">
+                                {{tour.description}}
+                        </div>
+                    </div>
+                </a>
+                </div>
+                {% endfor %}
+              </div>
+              <a class="carousel-control-prev" href="#carousel-hot" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-hot" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
 
 {% endblock %}

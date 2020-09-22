@@ -1,10 +1,19 @@
 from django.shortcuts import render
+from tours.models import Tour
+
 
 
 def home(request):
+    tours = Tour.objects.all()
+
+    context = {
+        'tours': tours,
+    }
+
     return render(
         request,
-        'home/home.html'
+        'home/home.html',
+        context,
     )
 
 def error_404_view(request,exception):
