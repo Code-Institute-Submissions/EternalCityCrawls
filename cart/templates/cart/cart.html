@@ -121,12 +121,12 @@
     </div>
 {% endblock %}
 
-{% block corejs %}
+{% block extra_js %}
 <!-- Find a way to bring the script into js file-->
 {{ block.super }}
 
-<script src="{% static 'js/tour-details.js' %}"></script>
-<script src="{% static 'js/cart.js' %}"></script>
+<script src="{% static 'cart/js/tour-details.js' %}"></script>
+<script src="{% static 'cart/js/cart.js' %}"></script>
 <script type="text/javascript">
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
