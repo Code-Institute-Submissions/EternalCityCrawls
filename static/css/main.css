@@ -57,7 +57,7 @@ body {
     background: #000 !important;
 }
 
-/* overlay background image */
+/* overlay  */
 
 .overlay {
     height: 100%;
@@ -222,7 +222,7 @@ a.category-badge > span.badge:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(23, 162, 184, .85);
+    background: #A8DADC;
     z-index: 9999;
 }
 
@@ -413,6 +413,14 @@ input[name='q']::placeholder {
   .master-head h1 {
     font-size: 2rem;
   }
+
+footer {
+    padding: 2rem 0;
+    text-align: left;
+    color: #F1FAEE;
+    background-color: #1D3557;
+  }
+
 
 /* --------------------------------- Media queries Carousels*/
 
