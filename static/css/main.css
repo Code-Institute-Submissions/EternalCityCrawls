@@ -420,6 +420,28 @@ footer {
     color: #F1FAEE;
     background-color: #1D3557;
   }
+/*------------Generic for Section------------*/
+
+section {
+    padding: 2rem 0;
+  }
+  
+  section h2 {
+    font-size: 3rem;
+  }
+/*------------Section Hot------------*/
+
+section.hot {
+    background-color: #F1FAEE;
+}
+section.hot .section-heading h2 {
+    margin-top: 0;
+
+  }
+  
+  section.hot .section-heading p {
+    margin-bottom: 0;
+  }
 
 
 /* --------------------------------- Media queries Carousels*/
