@@ -394,7 +394,7 @@ input[name='q']::placeholder {
 .master-head {
     position: relative;
     background-color: #343a40;
-    background: url('/media/christian-nordmark-2N-kwvSeU5U-unsplash.jpg') no-repeat center center;
+    background: url('/media/cover.jpg') no-repeat center center;
     background-size: cover;
     padding-top: 8rem;
     padding-bottom: 8rem;
