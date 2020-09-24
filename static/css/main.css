@@ -443,6 +443,15 @@ section.hot .section-heading h2 {
     margin-bottom: 0;
   }
 
+/*------------nav------------*/
+
+.bg-main {
+  background-color: #1D3557;
+}
+
+.color-contrast {
+  color: #e63946;
+}
 
 /* --------------------------------- Media queries Carousels*/
 
@@ -464,7 +473,8 @@ section.hot .section-heading h2 {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 20px;
+
     }
 }
 
