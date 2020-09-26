@@ -454,7 +454,7 @@ section {
 section.hot {
     background-color: #F1FAEE;
 }
-section.hot .section-heading h2 {
+section.hot .section-heading h3 {
     margin-top: 0;
 
   }
@@ -462,6 +462,17 @@ section.hot .section-heading h2 {
   section.hot .section-heading p {
     margin-bottom: 0;
   }
+
+/*------------Section Testimonials------------*/
+
+section.testimonials .section-heading h3 {
+  margin-top: 0;
+
+}
+
+section.testimonials .section-heading p {
+  margin-bottom: 0;
+}
 
 /*------------nav------------*/
 
@@ -496,6 +507,10 @@ transform: skewY(3deg);
   border: 0.02rem solid #cccccc;
   background-color: white;
 }
+
+#card-tour{
+  border: 1px solid #000;
+} 
 
 /* --------------------------------- Media queries Carousels*/
 
