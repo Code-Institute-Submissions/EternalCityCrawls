@@ -480,6 +480,14 @@ section.testimonials .section-heading p {
   background-color: #1D3557;
 }
 
+.bg-secondary {
+  background-color: #F1FAEE;
+}
+
+.bg-tertiary{
+  background-color: #A8DADC;
+}
+
 .nav-item {
   background-color: #1D3557;
 
@@ -508,10 +516,19 @@ transform: skewY(3deg);
   background-color: white;
 }
 
-#card-tour{
+.card-tour{
   border: 1px solid #000;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+  
 } 
 
+.card-img-top {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+
+}
 /* --------------------------------- Media queries Carousels*/
 
 /* Slightly larger container on xl screens */

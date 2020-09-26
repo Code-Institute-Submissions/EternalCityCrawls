@@ -19,7 +19,7 @@
                   <img class="card-img-top " src="{{  tour.image.url }}" alt="Card image">
                 </a>
                 <div class="card-body">
-                  <h5 class="card-title">{{ tour.name}}</h5>
+                  <h5 class="card-title text-nowrap text-truncate">{{ tour.name}}</h5>
                   <p class="lead text-left font-weight-bold">Cost: €{{ tour.cost }}</p>
                   {% if tour.rating %}
                       <p><small class="text-muted mb-0 "><i class="fas fa-star mr-1"></i>Rating: {{ tour.rating }} /5</small></p>
