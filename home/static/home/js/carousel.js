@@ -7,7 +7,6 @@
      */
     function slideCustom(carousel, suffix) {
 
-        console.log('2')
         let $e = $(carousel.relatedTarget);
         let idx = $e.index();
         let itemsPerSlide = 5;
@@ -28,8 +27,6 @@
 
     $(document).ready(function () {
 
-
-        console.log('1')
 
         $('#carousel-hot').on('slide.bs.carousel', function (e) {
             slideCustom(e, 'hot')
