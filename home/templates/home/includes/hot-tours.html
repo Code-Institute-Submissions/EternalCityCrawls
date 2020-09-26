@@ -14,19 +14,29 @@
             {% for tour in tours %}
             <div
               class="carousel-item item-hot col-12 col-sm-6 col-md-4 col-lg-3 {% if forloop.counter == 1 %} active {% endif %}">
-
-              <a href="{% url 'tour_details' tour.id %}" class="no-underline">
-                <div class="card card-game" data-toggle="tooltip" data-placement="top" title="{{ tour.name }}">
-                    <div class="card-header">
-                        <h5 class=" text-center text-truncate">{{ tour.name}}</h5>
-                    </div>
-                    <div class="card-body">
-                        <img class="card-img-top img-fluid p-2" src="{{  tour.image.url }}">
-                            {{tour.description}}
-                    </div>
+              <div class="card" data-toggle="tooltip" data-placement="top" title="{{ tour.description }}">
+                <a href="{% url 'tour_details' tour.id %}" class="stretched-link">
+                  <img class="card-img-top " src="{{  tour.image.url }}" alt="Card image">
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">{{ tour.name}}</h5>
+                  <p class="lead text-left font-weight-bold">Cost: €{{ tour.cost }}</p>
+                  {% if tour.rating %}
+                      <p><small class="text-muted mb-0 "><i class="fas fa-star mr-1"></i>Rating: {{ tour.rating }} /5</small></p>
+                  {% else %}
+                      <small class="text-muted">No Rating</small></p>
+                  {% endif %}
+                  {% if tour.duration %}
+                  <p><small class="text-muted mb-0 "><i class="fas fa-clock mr-1"></i>Duration: {{ tour.duration }}</small></p>
+                  {% else %}
+                  <p> <small class="text-muted">No Duration</small></p>
+                  {% endif %}
                 </div>
-            </a>
+              </div>
+
             </div>
+
+
             {% endfor %}
           </div>
           <a class="carousel-control-prev" href="#carousel-hot" role="button" data-slide="prev">

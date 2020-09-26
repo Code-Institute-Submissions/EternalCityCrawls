@@ -487,6 +487,17 @@ transform: skewY(3deg);
   transform: skewY(-3deg);
 }
 
+/* --------------------------------- Card Effects*/
+
+.card:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0em 0.2rem 0.8rem rgba(38, 38, 38, 0.2);
+  top: -0.3em;
+  border: 0.02rem solid #cccccc;
+  background-color: white;
+}
+
+
 /* --------------------------------- Media queries Carousels*/
 
 /* Slightly larger container on xl screens */
