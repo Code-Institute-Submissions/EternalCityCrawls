@@ -24,8 +24,8 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
+.book-now-button {
+    background: #457B9D;
     color: white;
     min-width: 260px;
 }
@@ -35,13 +35,13 @@ body {
     color: white;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.book-now-button:hover,
+.book-now-button:active,
+.book-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #1D3537;
     color: white;
 }
 
