@@ -7,45 +7,43 @@
             <section class="row">
                 <div class="col-md-3 col-sm-6 col-6">
                     <div class="footer__nav__group">
-                        <h4 class="footer__nav__group__header">Eternal City Crawls</h4>
+                        <h4 class="footer__nav__group__header color-contrast">Eternal City Crawls</h4>
                         <ul class="footer__nav__group__list">
-                            <li class="footer__nav__group__list__item"><a aria-label="home"
+                            <li class="footer__nav__group__list__item color-contrast"><a aria-label="home" class = "color-contrast"
                                     href="{% url 'home' %}">Home</a></li>
-                            <li class="footer__nav__group__list__item"><a aria-label="shop" href="/tours">Booking</a>
+                            <li class="footer__nav__group__list__item color-contrast"><a aria-label="shop" class = "color-contrast" href="/tours">Booking</a>
                             </li>
-                            <li class="footer__nav__group__list__item"><a aria-label="about-us" href="">About Us</a>
-                            </li>
-                            <li class="footer__nav__group__list__item"><a aria-label="contact-us" href="">Contact Us</a>
+                            <li class="footer__nav__group__list__item color-contrast"><a aria-label="contact-us" class = "color-contrast" href="/#contacts">Contact Us</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-6">
                     <div class="footer__nav__group">
-                        <h4 class="footer__nav__group__header">Account</h4>
+                        <h4 class="footer__nav__group__header color-contrast">Account</h4>
                         <ul class="footer__nav__group__list">
                             {% if user.is_authenticated %}
-                            <li class="footer__nav__group__list__item"><a aria-label="my profile"
+                            <li class="footer__nav__group__list__item color-contrast"><a aria-label="my profile" class = "color-contrast"
                                     href="{% url 'profile' %}">My Profile</a></li>
-                            <li class="footer__nav__group__list__item"><a aria-label="sign out"
+                            <li class="footer__nav__group__list__item color-contrast"><a aria-label="sign out" class = "color-contrast"
                                     href="{% url 'account_logout' %}">Sign Out</a></li>
-                            <li class="footer__nav__group__list__item"><a aria-label="your cart"
+                            <li class="footer__nav__group__list__item color-contrast"><a aria-label="your cart" class = "color-contrast"
                                     href="{% url 'view_cart' %}">Your Cart</a></li>
                             {% else %}
-                            <li class="footer__nav__group__list__item"><a aria-label="register"
+                            <li class="footer__nav__group__list__item color-contrast"><a aria-label="register" class = "color-contrast"
                                     href="{% url 'account_signup' %}">Register</a></li>
-                            <li class="footer__nav__group__list__item"><a aria-label="sign in"
+                            <li class="footer__nav__group__list__item color-contrast"><a aria-label="sign in" class = "color-contrast"
                                     href="{% url 'account_login' %}">Sign In</a></li>
                             {% endif %}
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4 offset-md-2 col-sm-12">
-                    <div class="footer__message mx-auto text-center">
+                    <div class="footer__message mx-auto text-center color-contrast pt-2">
                         <a aria-label="home" href="{% url 'home' %}">
                             <img class="logo" src="{% static 'img/small-logo.png' %}" alt="ECC Logo">
                         </a>
-                        <p>Thanks for visiting Eternal City Crawls</p>
+                        <p>Thanks for visiting us!</p>
                     </div>
                 </div>
             </section>
