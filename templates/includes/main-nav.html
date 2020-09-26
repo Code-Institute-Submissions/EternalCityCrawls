@@ -1,33 +1,33 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
-            <a class="logo-font font-weight-bold nav-link mr-5 color-contrast" href="{% url 'home' %}" id="home-link">
+        <li class="nav-item d-block d-md-none color-contrast">
+            <a class="logo-font font-weight-bold mr-5 color-contrast" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
         <li class="nav-item dropdown bg-main">
-            <a class="logo-font font-weight-bold nav-link  mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5 color-contrast" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Tours
             </a>
-            <div class="dropdown-menu border-0 color-contrast" aria-labelledby="all-products-link">
-                <a href="{% url 'tours' %}?sort=cost&direction=asc" class="dropdown-item">By Cost</a>
-                <a href="{% url 'tours' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'tours' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'tours' %}" class="dropdown-item">All Tours</a>
+            <div class="dropdown-menu border-0 bg-main" aria-labelledby="all-products-link">
+                <a href="{% url 'tours' %}?sort=cost&direction=asc" class="dropdown-item color-contrast">By Cost</a>
+                <a href="{% url 'tours' %}?sort=rating&direction=desc" class="dropdown-item color-contrast">By Rating</a>
+                <a href="{% url 'tours' %}?sort=category&direction=asc" class="dropdown-item color-contrast">By Category</a>
+                <a href="{% url 'tours' %}" class="dropdown-item color-contrast">All Tours</a>
             </div>
         </li>
 
         <li class="nav-item dropdown bg-main">
-            <a class="logo-font font-weight-bold nav-link mr-5 color-contrast" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font logo-font font-weight-bold mr-5 color-contrast" href="#" id="tour-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Category
             </a>
-            <div class="dropdown-menu border-0 color-contrast" aria-labelledby="clothing-link">
-                <a href="{% url 'tours' %}?category=food" class="dropdown-item">Food Tour</a>
-                <a href="{% url 'tours' %}?category=day" class="dropdown-item">Daily Trip</a>
-                <a href="{% url 'tours' %}?category=dark" class="dropdown-item">Dark Tour</a>
-                <a href="{% url 'tours' %}?category=class" class="dropdown-item">Class</a>
-                <a href="{% url 'tours' %}?category=wheel" class="dropdown-item">Rome on Wheels</a>
-                <a href="{% url 'tours' %}" class="dropdown-item">All Category</a>
+            <div class="dropdown-menu border-0 bg-main" aria-labelledby="tour-link">
+                <a href="{% url 'tours' %}?category=food" class="dropdown-item color-contrast">Food Tour</a>
+                <a href="{% url 'tours' %}?category=day" class="dropdown-item color-contrast">Daily Trip</a>
+                <a href="{% url 'tours' %}?category=dark" class="dropdown-item color-contrast">Dark Tour</a>
+                <a href="{% url 'tours' %}?category=class" class="dropdown-item color-contrast">Class</a>
+                <a href="{% url 'tours' %}?category=wheel" class="dropdown-item color-contrast">Rome on Wheels</a>
+                <a href="{% url 'tours' %}" class="dropdown-item color-contrast">All Category</a>
             </div>
         </li>
 
