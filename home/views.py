@@ -8,7 +8,7 @@ from django.conf import settings
 
 
 def home(request):
-    tours = Tour.objects.all()
+    tours = Tour.objects.all().order_by('-rating')[:8]
     contact_form = ContactForm()
 
     context = {
