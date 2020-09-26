@@ -2,22 +2,38 @@
     "pk": 1,
     "model": "tours.category",
     "fields": {
-        "name": "photographic",
-        "friendly_name": "Photographic"
+        "name": "wheel",
+        "friendly_name": "on the wheel"
     }
 }, {
     "pk": 2,
     "model": "tours.category",
     "fields": {
-        "name": "gourmet",
-        "friendly_name": "gourmet"
+        "name": "class",
+        "friendly_name": "class"
     }
 }, {
     "pk": 3,
     "model": "tours.category",
     "fields": {
-        "name": "short",
-        "friendly_name": "Short Tour"
+        "name": "day",
+        "friendly_name": "daily trip"
+    }
+},
+{
+    "pk": 4,
+    "model": "tours.category",
+    "fields": {
+        "name": "dark",
+        "friendly_name": "dark tour"
+    }
+},
+{
+    "pk": 5,
+    "model": "tours.category",
+    "fields": {
+        "name": "food",
+        "friendly_name": "food tour"
     }
 }
 ]

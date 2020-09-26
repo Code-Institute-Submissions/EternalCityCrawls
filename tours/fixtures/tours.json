@@ -3,48 +3,52 @@
     "model": "tours.tour",
     "fields": {
         "name": "Bycicle ride on Appia Way",
-        "description": "Bycicle Ride on the most Ancient Roman Way. Visit the Catacombs where first Christians were hiding",
+        "description": "Escape the bustle of the capital on this family-friendly cycling journey along the ancient Appian Way, one of Rome’s very first paved roads. You’ll pass ornate mansions, centuries-old statues and tombs, catacombs, and an aqueduct from antiquity.",
         "cost": 60,
-        "category": 3,
+        "category": 1,
         "rating": 4.6,
+        "duration": "4 hours",
         "image_url": "/media/",
-        "image": "appia.jpeg"
+        "image": "appia-bike.jpg"
     }
 }, {
     "pk": 2,
     "model": "tours.tour",
     "fields": {
         "name": "Trastevere's Gourmet Tour",
-        "description": "Taste the most prelibate dishes in Roman Cuisine, visiting the most Roman Neighbourhood",
+        "description": "Taste the most prelibate dishes in Roman Cuisine, wandering through a charming labyrinth of alley.",
         "cost": 59.99,
-        "category": 2,
+        "category": 5,
         "rating": 4.8,
+        "duration": "3 hours",
         "image_url": "/media/",
-        "image": "trastevere.jpeg"
+        "image": "trastevere.jpg"
     }
 }, {
     "pk": 3,
     "model": "tours.tour",
     "fields": {
-        "name": "Street Photography in Testaccio",
-        "description": "Capture Glimpse of Roman live in a Traditional Market",
-        "cost": 29.99,
-        "category": 1,
+        "name": "Rome Street Food",
+        "description": "This tasting tour takes you in a culinary journey through Rome's most scenic neighbourhood",
+        "cost": 35.99,
+        "category": 5,
         "rating": 4.7,
+        "duration": "3 hours",
         "image_url": "/media/",
-        "image": "Testaccio.jpeg"
+        "image": "street-food.jpg"
     }
 }, {
     "pk": 4,
     "model": "tours.tour",
     "fields": {
-        "name": "Wild Life",
-        "description": "Day Trip to Villa Gregoriana's Park, taking picture of his wild beauty, enriched by Roman ruins ",
-        "cost": 69.99,
-        "category": 1,
+        "name": "Catacombs",
+        "description": "Visit the network of tunnels beneath the eternal city, once burial places and worship site for the first Christians",
+        "cost": 62.99,
+        "category": 4,
         "rating": 4.1,
+        "duration": "3 hours",
         "image_url": "/media/",
-        "image": "parco.jpg"
+        "image": "catacombs.jpg"
     }
 },{
     "pk": 5,
@@ -53,8 +57,9 @@
         "name": "Rustic Lunch in Bomarzo",
         "description": "enjoy Roman's countryside traditional taste, along with a visit to the Sacred Wood of Bomarzo",
         "cost": 99.99,
-        "category": 2,
+        "category": 5,
         "rating": 4.3,
+        "duration": "8 hours",
         "image_url": "/media/",
         "image": "Bomarzo.jpg"
     }
@@ -63,11 +68,131 @@
     "model": "tours.tour",
     "fields": {
         "name": "Ghost Night Walk",
-        "description": "Night tour to the haunted corner of the Eternal City ",
+        "description": "Explore the haunted corner of the Eternal City and its most spooky streets.",
         "cost": 39.99,
-        "category": 3,
+        "category": 4,
         "rating": 3.9,
+        "duration": "2.5 hours",
         "image_url": "/media/",
-        "image": "ghost.jpg"
+        "image": "ghost-tour.jpg"
     }
-}]
+},{"pk": 7,
+"model": "tours.tour",
+"fields": {
+    "name": "Vespa Tour by Night",
+    "description": "Zip through the bustling streets of Rome as the Romans do — on a Vespa! Hop off for a closer look at Imperial monuments and baroque piazzas. Learn about the history of Rome, from ancient emperors to the modern metropolis, and get an insider’s glimpse at some of the city’s best-kept secrets.",
+    "cost": 64.50,
+    "category": 1,
+    "rating": 4.2,
+    "duration": "2 hours",
+    "image_url": "/media/",
+    "image": "vespa-tour.jpg"
+    }
+},{"pk": 8,
+    "model": "tours.tour",
+    "fields": {
+        "name": "City Center Segway Tour",
+        "description": "Explore the many wonders of Rome on a fun and informative Segway tour. Admire the Pantheon and other ancient monuments, and explore Rome’s Baroque treasures including the Trevi Fountain, Spanish Steps and Piazza Navona",
+        "cost": 80,
+        "category": 1,
+        "rating": 3.8,
+        "duration": "4 hours",
+        "image_url": "/media/",
+        "image": "segway.jpg"
+        }
+    },
+    {"pk": 9,
+        "model": "tours.tour",
+        "fields": {
+            "name": "Gladiator School",
+            "description": "Find out what it takes to be an ancient Roman gladiator at the Gladiator School of Rome. During a hands-on lesson with instructors from the Historic Group of Rome, learn how to fight with authentic weapons of the time while wearing a traditional gladiator tunic and belt.",
+            "cost": 120,
+            "category": 2,
+            "rating": 3.7,
+            "duration": "3 hours",
+            "image_url": "/media/",
+            "image": "gladiator.jpg"
+            }
+        },
+        {"pk": 10,
+            "model": "tours.tour",
+            "fields": {
+                "name": "Gelato Making Class",
+                "description": "Embrace Italian culinary culture and learn to make gelato with our hands-on gelato-making class in Rome. It’s fun for adults and it’s fun for kids too!",
+                "cost": 45,
+                "category": 2,
+                "rating": 3.4,
+                "duration": "2 hours",
+                "image_url": "/media/",
+                "image": "gelato.jpg"
+                }
+            },
+            {"pk": 11,
+                "model": "tours.tour",
+                "fields": {
+                    "name": "Pasta Cooking Class",
+                    "description": "Discover the secrets of authentic Italian cuisine on this family-friendly cooking class and learn to make some of Italy’s signature dishes. Get hands-on making fresh pasta.",
+                    "cost": 49.99,
+                    "category": 2,
+                    "rating": 4.3,
+                    "duration": "2 hours",
+                    "image_url": "/media/",
+                    "image": "fettuccine.jpg"
+                    }
+                }, 
+                {"pk": 12,
+                    "model": "tours.tour",
+                    "fields": {
+                        "name": "Daily trip To Castel Gandolfo",
+                        "description": "Visit the Pontifical Villas of Castel Gandolfo, the traditional summer residence of the pope, on this daily private tour from Rome.",
+                        "cost": 59.99,
+                        "category": 3,
+                        "rating": 4.1,
+                        "duration": "8 hours",
+                        "image_url": "/media/",
+                        "image": "castel-gandolfo.jpg"
+                        }
+                    },  
+                    {"pk": 13,
+                        "model": "tours.tour",
+                        "fields": {
+                            "name": "Pompeii Ruins Trip from Rome",
+                            "description": "Explore the massive archaeological excavation at Pompeii on this unforgettable day tour from Rome. Enjoy panoramic views over Naples, and walk through the ancient Roman streets of Pompeii",
+                            "cost": 139.99,
+                            "category": 3,
+                            "rating": 4.4,
+                            "duration": "1 day",
+                            "image_url": "/media/",
+                            "image": "pompeii.jpg"
+                            }
+                        },   
+                        {"pk": 14,
+                            "model": "tours.tour",
+                            "fields": {
+                                "name": "Capuchin Crypts",
+                                "description": "Explore the Capuchin Crypts,or as locals call it, the Bone Chapels, is a truly dark and mystical place, decorated with the bones of about 3700 Capuchin friars.",
+                                "cost": 29.99,
+                                "category": 4,
+                                "rating": 3.2,
+                                "duration": "3 hours",
+                                "image_url": "/media/",
+                                "image": "crypt.jpg"
+                                }
+                            },
+                            {"pk": 15,
+                                "model": "tours.tour",
+                                "fields": {
+                                    "name": "Hadrian's villa day trip",
+                                    "description": "Rome is full of magnificent ancient monuments, but there are even more historic gems just outside of the city. This day tour explore hill town of Tivoli, home of 2 UNESCO Marvel",
+                                    "cost": 69.99,
+                                    "category": 3,
+                                    "rating": 3.6,
+                                    "duration": "7 hours",
+                                    "image_url": "/media/",
+                                    "image": "tivoli.jpg"
+                                    }
+                                }
+    ]
+
+    
+
