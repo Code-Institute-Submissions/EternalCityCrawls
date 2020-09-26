@@ -453,6 +453,15 @@ section.hot .section-heading h2 {
   color: #e63946;
 }
 
+.bg-skew{
+
+transform: skewY(3deg);
+}
+
+.unskew{
+  transform: skewY(-3deg);
+}
+
 /* --------------------------------- Media queries Carousels*/
 
 /* Slightly larger container on xl screens */
@@ -473,7 +482,7 @@ section.hot .section-heading h2 {
     }
 
     .header-container {
-        padding-top: 20px;
+      padding-top: 144px;
 
     }
 }
