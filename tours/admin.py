@@ -10,6 +10,7 @@ class TourAdmin(admin.ModelAdmin):
         'category',
         'cost',
         'rating',
+        'duration',
         'image',
     )
 
