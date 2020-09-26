@@ -14,7 +14,7 @@
             {% for tour in tours %}
             <div
               class="carousel-item item-hot col-12 col-sm-6 col-md-4 col-lg-3 {% if forloop.counter == 1 %} active {% endif %}">
-              <div class="card" data-toggle="tooltip" data-placement="top" title="{{ tour.description }}">
+              <div class="card card-tour" data-toggle="tooltip" data-placement="top" title="{{ tour.description }}">
                 <a href="{% url 'tour_details' tour.id %}" class="stretched-link">
                   <img class="card-img-top " src="{{  tour.image.url }}" alt="Card image">
                 </a>
