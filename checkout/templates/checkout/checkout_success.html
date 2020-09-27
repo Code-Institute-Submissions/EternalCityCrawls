@@ -2,16 +2,8 @@
 {% load static %}
 
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
-    <div class="overlay"></div>
+    <div class="overlay bg-tertiary"></div>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -174,18 +166,18 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'profile' %}" class="btn btn-tertiary rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
-                <a href="{% url 'tours' %}?category=photography" class="btn btn-black rounded-0 my-2">
+                <a href="{% url 'tours' %}" class="btn btn-tertiaryrounded-0 my-2">
                     <span class="icon mr-2">
                         <i class="fas fa-gifts"></i>
                     </span>
-                    <span class="text-uppercase">Now check out Photograpy Tour</span>
+                    <span class="text-uppercase">Now check out our Tour</span>
                 </a>
                 {% endif %}
 			</div>

@@ -555,6 +555,10 @@ section.contacts .section-heading p {
   background-color: #457B9D;
 }
 
+.empty-cart {
+  height: 40vh;;
+}
+
 /* --------------------------------- Media queries Carousels*/
 
 /* Slightly larger container on xl screens */
