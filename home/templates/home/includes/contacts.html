@@ -7,10 +7,10 @@
         <hr>
       </div>
       <div class="row justify-content-center">
-        <div class="col-11 col-md-7 form-wrapper p-4 text-white">
+        <div class="col-11 col-md-7 form-wrapper text-white">
           <form method="POST" class="form" action="{% url 'send_message' %}">
             {% csrf_token %}
-            <fieldset class="rounded px-3 mb-5">
+            <fieldset class="rounded mb-5">
 
             {{ contact_form.name | as_crispy_field }}
             {{ contact_form.email | as_crispy_field }}
