@@ -563,6 +563,13 @@ section.contacts .section-heading p {
   height: 40vh;;
 }
 
+/* --------------------------------- All Auth */
+
+.allauth-form-inner-content button, .allauth-form-inner-content input[type='submit'] {
+  background-color: #1D3557;
+}
+
+
 /* --------------------------------- Media queries Carousels*/
 
 /* Slightly larger container on xl screens */
