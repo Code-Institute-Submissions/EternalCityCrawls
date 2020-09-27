@@ -17,7 +17,7 @@ def all_tours(request):
     query = None
     sort = None
     direction = None
-    categories = None
+    categories = Category.objects.all
 
 
     if request.GET:
@@ -36,9 +36,8 @@ def all_tours(request):
 
             tours = tours.order_by(sortkey)
         if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            tours = tours.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+            categories_filter = request.GET['category'].split(',')
+            tours = tours.filter(category__name__in=categories_filter)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -55,7 +54,7 @@ def all_tours(request):
     context = {
         'tours': tours,
         'search_term': query,
-        'current_categories': categories,
+        'categories': categories,
         'current_sorting': current_sorting
     }
 
