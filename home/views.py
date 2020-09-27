@@ -34,10 +34,10 @@ def contact_us(request):
             from_email = contact_form.cleaned_data['email']
 
             send_mail(
-            name,
+            f"message from {name} - {from_email}",
             message,
             settings.DEFAULT_CONTACT_EMAIL, # here is from the user
-            [settings.CONTACT_RECIPIENT],
+            [settings.DEFAULT_CONTACT_EMAIL],
         )  
             messages.success(
                 request, "Your message has been sent, we will be in touch soon.")
