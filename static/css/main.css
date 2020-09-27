@@ -474,6 +474,29 @@ section.testimonials .section-heading p {
   margin-bottom: 0;
 }
 
+/*------------Section Contact------------*/
+
+section.contacts .section-heading h3 {
+  margin-top: 0;
+
+}
+
+section.contacts .section-heading p {
+  margin-bottom: 0;
+}
+
+.btn-send {
+  color: #FFFFFF;
+  width: 100%;
+  display: block;
+  background-color: #457B9D;
+}
+
+.btn-send:hover {
+  color: #FFFFFF;
+  background-color: #1D3537;
+}
+
 /*------------nav------------*/
 
 .bg-main {
@@ -497,14 +520,6 @@ section.testimonials .section-heading p {
   color: #e63946;
 }
 
-.bg-skew{
-
-transform: skewY(3deg);
-}
-
-.unskew{
-  transform: skewY(-3deg);
-}
 
 /* --------------------------------- Card Effects*/
 
