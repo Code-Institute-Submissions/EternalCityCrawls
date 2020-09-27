@@ -32,11 +32,18 @@ def contact_us(request):
             name = contact_form.cleaned_data['name']
             message = contact_form.cleaned_data['message']
             from_email = contact_form.cleaned_data['email']
+
+            print (            name,
+            message,
+            settings.DEFAULT_CONTACT_EMAIL, # here is from the user
+            [settings.CONTACT_RECIPIENT]
+            )
             send_mail(
             name,
             message,
             settings.DEFAULT_CONTACT_EMAIL, # here is from the user
-            [settings.CONTACT_RECIPIENT]
+            [settings.CONTACT_RECIPIENT],
+            fail_silently=True
         )  
             messages.success(
                 request, "Your message has been sent, we will be in touch soon.")

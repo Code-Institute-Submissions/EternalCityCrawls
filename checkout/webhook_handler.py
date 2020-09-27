@@ -137,6 +137,14 @@ class StripeWH_Handler:
             'checkout/confirmation_emails/email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
+        print(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email],
+
+        )
+
         send_mail(
             subject,
             body,
