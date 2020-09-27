@@ -27,7 +27,7 @@ class StripeWH_Handler:
             )
         print(1)
         body = render_to_string(
-            'checkout/confirmation_emails/body.txt',
+            'checkout/confirmation_emails/subject.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
             )
 
