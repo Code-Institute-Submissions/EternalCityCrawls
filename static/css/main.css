@@ -544,6 +544,17 @@ section.contacts .section-heading p {
   border-top-right-radius: 2rem;
 
 }
+
+/* --------------------------------- Tour Detail*/
+
+.tour-detail-section {
+  height: 70vh;;
+}
+
+.btn-tertiary{
+  background-color: #457B9D;
+}
+
 /* --------------------------------- Media queries Carousels*/
 
 /* Slightly larger container on xl screens */
