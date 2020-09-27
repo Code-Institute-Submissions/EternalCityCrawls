@@ -42,9 +42,15 @@ def contact_us(request):
                 request, "Your message has been sent, we will be in touch soon.")
             return redirect('send_message')
     else:
+        tours = Tour.objects.all().order_by('-rating')[:8]
         contact_form = ContactForm()
 
-    return render(request, 'home/home.html', { 'contact_form': contact_form})
+        context = {
+        'tours': tours,
+        'contact_form': contact_form
+        }
+
+    return render(request, 'home/home.html', context)
 
 def error_404_view(request,exception):
     return render(request,'home/404.html')
