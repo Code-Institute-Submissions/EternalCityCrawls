@@ -551,6 +551,10 @@ section.contacts .section-heading p {
   height: 70vh;;
 }
 
+.btn-main{
+  background-color: #1D3557;
+}
+
 .btn-tertiary{
   background-color: #457B9D;
 }

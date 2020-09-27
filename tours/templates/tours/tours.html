@@ -9,12 +9,12 @@
                 <h2 class="logo-font">Tours</h2>
                 {% if categories %}
                 <a class="category-badge text-decoration-none"href="{% url 'tours' %}">
-                    <span class="p-2 badge badge-primary text-black rounded-0 border border-dark">All Tours</span>
+                    <span class="p-2 badge badge-primary btn-main text-black rounded-0 border border-dark">All Tours</span>
                 </a>
                 {% endif %}
                 {% for c in categories %}
                 <a class="category-badge text-decoration-none"href="{% url 'tours' %}?category={{ c.name }}">
-                    <span class="p-2 badge badge-primary text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    <span class="p-2 badge badge-primary btn-main text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                 </a>
                 {% endfor %}
 
