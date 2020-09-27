@@ -144,6 +144,7 @@ def checkout_success(request, order_number):
         order.save()
         if save_info:
             profile_data = {
+                'default_full_name': order.full_name,
                 'default_phone_number': order.phone_number,
                 'default_country': order.country,
                 'default_postcode': order.postcode,
