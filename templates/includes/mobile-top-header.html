@@ -21,7 +21,7 @@
     </div>
 </li>
 <li class="list-inline-item dropdown">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-black nav-link d-block d-lg-none" href="#" id="nav-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg color-contrast"></i></div>
             {% if request.user.is_authenticated %}
@@ -31,7 +31,7 @@
             {% endif %}
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0 bg-main" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_tour' %}" class="dropdown-item color-contrast">Tour Management</a>
