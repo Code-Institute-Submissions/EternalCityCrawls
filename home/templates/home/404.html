@@ -1,17 +1,17 @@
 {% extends "base.html" %}
-{% load static %}
 
 
 
 {% block content %}
 
 <!-- 404 page -->
-<main class="error-page bg-main">
+<div class="overlay bg-tertiary"></div>
+<section class="error-page page-404">
     <h1>Page Not Found!</h1>
     <p>Error: 404</p>
     <p>Return back to safety using this button</p>
-    <a aria-label="Home" class="btn btn--primary" href="{% url 'home' %}">Home</a>
-</main> 
+    <a aria-label="Home" class="btn btn-tertiary" href="{% url 'home' %}">Home</a>
+</section> 
 
 
 {% endblock %}
