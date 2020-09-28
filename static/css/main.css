@@ -570,30 +570,10 @@ section.contacts .section-heading p {
 }
 
 
-/* --------------------------------- Media queries Carousels*/
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
+/* ------------Media queries Section: Carousels and Navbar---------------*/
 
-    .header-container {
-      padding-top: 144px;
-
-    }
-}
 
 
 @media (min-width: 576px) {
@@ -742,4 +722,25 @@ section.contacts .section-heading p {
       display: block;
       visibility: visible;
     }
- 
+
+      /* settings related to the header */
+    .fixed-top-desktop-only {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+  }
+
+    .header-container {
+      padding-top: 144px;
+
+    }
+  }
+
+@media (min-width: 1200px) {
+    /* enlarge container on bigger screen */
+    .container {
+      max-width: 80%;
+    }
+}
