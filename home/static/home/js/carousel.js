@@ -27,7 +27,7 @@
 
     $(document).ready(function () {
 
-
+        // invoke slide custom on sliding.
         $('#carousel-hot').on('slide.bs.carousel', function (e) {
             slideCustom(e, 'hot')
         });

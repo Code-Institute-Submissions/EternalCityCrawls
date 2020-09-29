@@ -46,7 +46,7 @@ card.addEventListener('change', function (event) {
 // from Stripe documentation Handle form submit
 let form = document.getElementById('payment-form');
 
-
+// loading spinner on submit
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
@@ -57,6 +57,7 @@ form.addEventListener('submit', function(ev) {
     let saveInfo = Boolean($('#id-save-info').attr('checked'));
     // From using {% csrf_token %} in the form
     let csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    // post token, secret and billing info
     let postData = {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
@@ -66,6 +67,7 @@ form.addEventListener('submit', function(ev) {
 
     $.post(url, postData).done(function () {
         console.log(form, form.country.value)
+        // save billing data if requested
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
@@ -84,6 +86,7 @@ form.addEventListener('submit', function(ev) {
         }
         }).then(function(result) {
             if (result.error) {
+                // payment unsuccessful
                 let errorDiv = document.getElementById('card-errors');
                 let html = `
                     <span class="icon" role="alert">
@@ -96,12 +99,13 @@ form.addEventListener('submit', function(ev) {
                 card.update({ 'disabled': false});
                 $('#submit-button').attr('disabled', false);
             } else {
+                // payment successfull
                 if (result.paymentIntent.status === 'succeeded') {
                     form.submit();
                 }
             }
         }).fail(function () {
-            // just reload the page, the error will be in django messages
+            // reload and show the error
             location.reload();
         });
 

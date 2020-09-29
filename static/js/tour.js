@@ -1,8 +1,10 @@
+// go to the upper side of the page
 $(".btt-link").click(function(e){
     window.scrollTo(0,0);
     
 })
 
+// changin sort selector
 $('#sort-selector').change(function(){
     let selector = $(this);
     let currentUrl = new URL(window.location);

@@ -1,4 +1,7 @@
-    // Disable +/- buttons outside 1-99 range
+    /** 
+     *  disable the the increment button between 1 and 15
+     * @param {object} ItemId on which implement the method 
+     */
     function handleEnableDisable(itemId) {
         let currentValue = parseInt($(`#id_qty_${itemId}`).val());
         let minusDisabled = currentValue < 2;
