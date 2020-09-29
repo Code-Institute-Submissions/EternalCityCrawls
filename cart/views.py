@@ -6,19 +6,28 @@ from tours.models import Tour
 # Create your views here.
 
 def view_cart(request):
-    """ A view that renders the bag contents page """
+    """Render Cart
+    Args:
+        request: http request
+    Returns:
+        render cart template
+    """
 
     return render(request, 'cart/cart.html')
 
 def add_to_cart(request, item_id):
-    """ Add Participants of the specified Tour to the cart"""
+    """Add tour to the cart
+    Args:
+        request: http request
+        item_id: Tour to add id
+    Returns:
+        redirect request
+    """
 
     tour = get_object_or_404(Tour, pk=item_id)
     participants = int(request.POST.get('participants'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
-    # Todo include here the code to manage the time of the booking, as size in example
-    # you will need complete logic to manage day of the booking, because on cart same item must be displayed separately.
 
     if item_id in list(cart.keys()):
         cart[item_id] += participants
@@ -34,7 +43,13 @@ def add_to_cart(request, item_id):
 
 
 def update_cart(request, item_id):
-    """update participants in cart"""
+    """update tour in the cart
+    Args:
+        request: http request
+        item_id: id tour to update
+    Returns:
+        redirect request
+    """
 
     tour = get_object_or_404(Tour, pk=item_id)
     participants = int(request.POST.get('participants'))
@@ -55,7 +70,13 @@ def update_cart(request, item_id):
     return redirect(reverse('view_cart'))
 
 def remove_from_cart(request, item_id):
-    """Remove the item from the cart"""
+    """remove tour from the cart
+    Args:
+        request: http request
+        item_id: id tour to delete
+    Returns:
+        redirect request
+    """
 
     tour = get_object_or_404(Tour, pk=item_id)
     try:

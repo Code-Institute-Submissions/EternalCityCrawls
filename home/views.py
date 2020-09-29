@@ -8,6 +8,12 @@ from django.conf import settings
 
 
 def home(request):
+    """Render home page along with top 8 tours.
+    Args:
+        request: HTTP request
+    Returns:
+        render home page
+    """
     tours = Tour.objects.all().order_by('-rating')[:8]
     contact_form = ContactForm()
 
@@ -23,8 +29,11 @@ def home(request):
     )
 
 def contact_us(request):
-    """
-    Returns the contact_us.html page and allows user to post contact forms
+    """Send Contact mail
+    Args:
+        request: HTTP request
+    Returns:
+        render home page
     """
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)

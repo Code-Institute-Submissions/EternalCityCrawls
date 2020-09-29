@@ -9,7 +9,12 @@ from .forms import UserProfileForm
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+   """create or update user profile
+    Args:
+        request: Http request
+    Return:
+        render profile page
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -34,6 +39,13 @@ def profile(request):
     return render(request, template, context)
 
 def booking_history(request, order_number):
+   """render booking history
+    Args:
+        request: Http request
+        order_number: number of the order
+    Return:
+        render checkout success
+    """    
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

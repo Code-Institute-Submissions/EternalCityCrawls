@@ -11,7 +11,12 @@ from .forms import TourForm
 
 
 def all_tours(request):
-    """ A view to show all tours available, including sorting and search queries """
+   """render all the tours in catalogue
+    Args:
+        request: Http request
+    Return:
+        render tour page
+    """ 
 
     tours = Tour.objects.all()
     query = None
@@ -62,7 +67,13 @@ def all_tours(request):
 
 
 def tour_detail(request, tour_id):
-    """ A view to show the details of a specific tour """
+   """render all details of a tour
+    Args:
+        request: Http request
+        tour_id: id of tour to visualize
+    Return:
+        render tour detail page
+    """ 
 
     tour = get_object_or_404(Tour,pk=tour_id)
 
@@ -76,9 +87,14 @@ def tour_detail(request, tour_id):
 
 @login_required
 def add_tour(request):
-    """ Add a Tour to the catalogue """
+    """add tour to catalogue
+    Args:
+        request: Http request
+    Return:
+        render add tour page
+    """ 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Tour Manager can do that.')
+        messages.error(request, 'Sorry, only Agency Manager can do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -101,7 +117,13 @@ def add_tour(request):
 
 @login_required
 def update_tour(request, tour_id):
-    """ Update a tour in the catalogue """
+    """update tour in catalogue
+    Args:
+        request: Http request
+        tour_id: id of a tour to update
+    Return:
+        render add tour page
+    """ 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only Tour Manager can do that.')
         return redirect(reverse('home'))
@@ -128,7 +150,13 @@ def update_tour(request, tour_id):
 
 @login_required
 def delete_tour(request, tour_id):
-    """ Delete a product from the store """
+    """delete tour in catalogue
+    Args:
+        request: Http request
+        tour_id: id of a tour to update
+    Return:
+        render add tour page
+    """ 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only Tour Manager can do that.')
         return redirect(reverse('home'))
