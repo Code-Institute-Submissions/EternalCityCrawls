@@ -1,6 +1,6 @@
 # EternalCityCrawls
 
-E-commerce application designed for Tour Agency, Eternal City Crawls is focused on selling Rome's Tour. The back-end infrastructure has been developed on Django, while front-end relies on a combination of vanilla JavaScript and Jquery.
+E-commerce application designed for a Tour Agency, Eternal City Crawls is focused on selling Rome's Tour. The back-end infrastructure has been developed on Django, while front-end relies on a combination of vanilla JavaScript and Jquery.
 
 ![Home page](static/img/mockup.png)
 
@@ -21,24 +21,21 @@ E-commerce application designed for Tour Agency, Eternal City Crawls is focused 
         - [Footer](#footer)
         - [Landing Page](#landing-page)
             - [Top Rating Carousel](#top-rating-carousel)
-            - [Testimonials](#testimonials-section)
-            - [Contact Section](#contact-page)
+            - [Testimonials](#testimonials)
+            - [Contact Section](#contact)
         - [Tour Page](#tour-page)
         - [Tour Management Page](#tour-management-page)
-        - [Tour Detail Page](#detail-page)
-        - [Cart Page](#detail-page)
-        - [Checkout Page](#login-page)
+        - [Tour Detail Page](#tour-detail-page)
+        - [Cart Page](#cart-page)
+        - [Checkout Page](#checkout-page)
         - [Checkout Process](#login-page)
         - [Registration Page](#registration-page)
-        - [404 Page](#contact-page)
-        - [500 Page](#registration-page)
+        - [404 Page](#404-page)
+        - [500 Page](#500-page)
     - [Features Left to Implement](#features-left-to-implement)
 1. [Information Architecture](#information-architecture)
     - [Database choice](#database-choice)
-    - [Data Storage Types](#data-storage-types)
-    - [Collections Data Structure](#collections-data-structure)
-        - [Users Collection](#users-collection)
-        - [Boardgame Collection](#boardgame-collection)
+    - [Data Model](#data-model)
 1. [Technologies Used](#technologies-used)
     - [Tools](#tools)
     - [Libraries](#libraries)
@@ -47,16 +44,15 @@ E-commerce application designed for Tour Agency, Eternal City Crawls is focused 
     - [How to run this project locally](#how-to-run-this-project-locally)
     - [Heroku Deployment](#heroku-deployment)
 1. [Credits](#credits)
-    - [Contents](#contents)
     - [Code](#code)
     - [Images](#images)
     - [Acknowledgements](#acknowledgements)
-1. [Contacts](#contacts)
+1. [Contacts](#contact)
 1. [Disclaimer](#disclaimer)
 
 # UX
 
-## User goals
+## User Stories
 
 The target audience of **Eternal Cities Crawls** is:
 - Local People interested in unusual visit of their own city.
@@ -117,20 +113,20 @@ Wireframe mockups, created using [Balsamiq](https://balsamiq.com/), are availabl
 
  1. Laptop
     1. [Landing](wireframes/landing/LandingLaptop.pdf)
-    1. [Seach](wireframes/search/SearchLaptop.pdf)
-    1. [Tour](wireframes/tour/TourLaptop.pdf)
+    1. [Tour](wireframes/search/SearchLaptop.pdf)
+    1. [Tour Details](wireframes/tour/TourLaptop.pdf)
     1. [Checkout Main](wireframes/checkout/CheckoutMainLaptop.pdf)
     1. [Checkout Details](wireframes/checkout/CheckoutDetailsLaptop.pdf)
  1. Tablet
      1. [Landing](wireframes/landing/LandingTablet.pdf)
-     1. [Search](wireframes/search/SearchTablet.pdf)
-     1. [Tour](wireframes/tour/TourTablet.pdf)
+     1. [Tour](wireframes/search/SearchTablet.pdf)
+     1. [Tour Details](wireframes/tour/TourTablet.pdf)
      1. [Checkout Main](wireframes/checkout/CheckoutMainTablet.pdf)
      1. [Checkout Details](wireframes/checkout/CheckoutDetailsTablet.pdf)
  1. Mobile
      1. [Landing](wireframes/landing/LandingMobile.pdf)
-     1. [Search](wireframes/search/SearchMobile.pdf)
-     1. [Tour](wireframes/tour/TourMobile.pdf)
+     1. [Tour](wireframes/search/SearchMobile.pdf)
+     1. [Tour Details](wireframes/tour/TourMobile.pdf)
      1. [Checkout Main](wireframes/checkout/CheckoutMainMobile.pdf)
      1. [Checkout Details](wireframes/checkout/CheckoutDetailsMobile.pdf)
 
@@ -230,7 +226,7 @@ The Carousel has been heavily customized, but is responsive, and programmaticall
 
 Testimonial Section present 3 circular images that are responsive, and each present a text, reporting their experience with the tour agency. For fun, the picture I used are those of ancient Romans. 
 
-#### Contact section
+#### Contact
 
 The section is a form embedded in the landing page, and is linked by the Navigation Bar; a customer can send an enquiry, and the mail will be send to the `gmail` account that has been set up.
 
@@ -494,7 +490,6 @@ STRIPE\_PUBLIC\_KEY|<your\_stripe\_public\_key>
 STRIPE\_SECRET\_KEY|<your\_stripe\_secret\_key>
 STRIPE\_WH\_SECRET|<your\_stripe\_webhook\_secret\_key>
 
-```
 
 * 7: <strong>Enter</strong> the following command into the terminal to generate tables from models into database.
 ```bash
@@ -513,7 +508,7 @@ python3 manage.py runserver
 
 Eternal City Crawls is now running locally on your host.
 
-### Deploying to Heroku:
+### Heroku Deployment:
 
 * 1: <strong>Create</strong> a requirements.txt file using the following command.
 ```bash
@@ -546,6 +541,8 @@ EMAIL\_HOST\_USER|<your\_email\_host\_user>
 * 8: Wait for the build to finish and click the view project link once build is completed.
 
 At this stage the deployment will be complete.
+
+# Credits
 
 ## Code
 
