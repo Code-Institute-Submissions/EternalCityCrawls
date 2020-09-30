@@ -148,14 +148,14 @@ Modals not dependent on the device:
 The navigation bar is sticky, and show Eternal city crawl log on the left, that can be clicked to redirect the user to the main
 page. On *Django* **back-end** the user is checked and the navbar can have 2 distinct aspect, whether the user is logged on or not; is worth to mention that all the controls and the status of the user are managed via the context within the Django Template; there is also a strong emphasis on defensive design in **back-end**, to prevent rogue navigation to section which require log-in.
 
-All Visitory have access to 2 distinct drop down:
+All Visitors have access to 2 distinct drop down:
 
 - All Tours Drop Down Menu containing link to tour page with ordering:
     1. by cost
     2. by category
     3. by rating
 
--  Category Drop Down Menu containing link to each category:
+- Category Drop Down Menu containing link to each category:
 
 
 
@@ -177,7 +177,7 @@ For users who are logged in, the list items are as follows:
 
 - Cart
 
-Only Super-user will see Tour Management link in their account; the navbar will change format for small screen, presenting a Hamburger Menu.
+Only Super-user will see Tour Management link in their account; the navbar will change format for small screen, presenting a *Hamburger Menu*.
 
 ##### Search Box
 
@@ -277,14 +277,14 @@ Tours can also be removed from the cart. Clicking on Checkout button will redire
 
 ### Checkout Page
 
-Here visitors can input their billing details, chose to save them to their profile, have a look a the card, and proceed to checkout, inputing the credit card. Control implemented in a *JavaScript* borrowed from Stripe Documentation will check the validity of the card, and will send a payment intent to Stripe Server, while a spinning wheel will appear to the user.
+Here visitors can input their billing details, chose to save them to their profile, have a look a the card, and proceed to checkout, inputing the credit card. Control implemented in a *JavaScript* borrowed from Stripe Documentation will check the validity of the card, and will send a payment intent to **Stripe** Server, while a spinning wheel will appear to the user.
 The results of the payment intent will be shown to the customer in a toast, along with further action took by the process.
 
 ### Checkout Process
 
 A WebHook Handler, borrowed from implementation by [Chris Z.](https://github.com/ckz8780/boutique_ado_v1), will manage whether the payment succeeded or less, and will take different action. In case of successful outcome, the order will be saved, along with the profile details( if requested) and mail will be send to the user containing details from the order.
 In case of failed outcome, user will be warned.
-The WebHook handler will process payment and return results, independently from the state of the site, and this is preventing malfunctioning due to any event happening on customer's browser.
+The WebHook handler will process payment and return results, *independently from the state of the site*, and this is preventing malfunctioning due to any event happening on customer's browser.
 
 ### Login Page
 
@@ -321,11 +321,11 @@ No *Pagination* is implemented at the moment, it could be coupled with an **infi
 
 ### Calendar
 
-End users at the moment cannot filter on the boardgame returned by a search or on their own collections. Would be great to allow them this possibilities, however the number of categories are highly variables, since they are coming from manual imputing, and this makes implementation of filtering really hard to be useful.
+Users should be able to view a **calendar** and to specify a date for their tour.
 
 ### Pop Over on Cards
 
-To allow the end user to have a glimpse about a Boardgame's characteristics, will be nice to have a pop over when hovering over a card, showing a part of the description along, with some major characteristics.
+To allow the end user to have a glimpse about a Tour's characteristics, will be nice to have a pop over when hovering over a card, showing a part of the description along, with some major characteristics.
 
 ### Rating by the user
 
@@ -333,7 +333,7 @@ To allow the end user to leave a Rating to the tour they had in the past, and st
 
 ### Automated test
 
-Application would benefit from implementation of automated tests with *Jasmine* for the front-end, and *pytest* for the back-end.
+Application would benefit from implementation of automated tests with *Jasmine* for the front-end, and *unit test* for the back-end.
 
 # Information Architecture
 
@@ -348,7 +348,7 @@ The user model used in this project is that which is provided by Django, click <
 
 #### The Category Table:
 
-The Category table has a model and lives within the tour app holds the category that are grouping all the tours.
+The **Category** table has a model and lives within the tour app holds the category that are grouping all the tours.
 
 **Name**|**Key in db**|**Validation**|**Field Type**
 :-----:|:-----:|:-----:|:-----:
@@ -358,7 +358,7 @@ friendly_name|Friendly Name|max\_length=254, default=''"|CharField
 
 #### The Tour Table:
 
-The tour table is son of category table, and its model lives within the app of identical name holds the following data for the tours available in Eternal City Crawls.
+The **tour** table is son of category table, and its model lives within the app of identical name holds the following data for the tours available in Eternal City Crawls.
 
 **Name**|**Key in db**|**Validation**|**Field Type**
 :-----:|:-----:|:-----:|:-----:
@@ -373,7 +373,7 @@ Image Url|image_url|upload\_to="media"|URLField
 
 #### The Order Table:
 
-The Order Table contains all details for the order, and  its model lives within the checkout app and has following fields:
+The **Order** Table contains all details for the order, and  its model lives within the checkout app and has following fields:
 
 **Name**|**Key in db**|**Validation**|**Field Type**
 :-----:|:-----:|:-----:|:-----:
@@ -397,7 +397,7 @@ Stripe id|stripe_id|max\_length=254, blank=False|CharField
 
 #### The OrderItem Table:
 
-The OrderItem table is child of Orders, its model lives within the checkout app and has following fields for the items composing an order.
+The **OrderItem** table is child of Orders, its model lives within the checkout app and has following fields for the items composing an order.
 
 **Name**|**Key in db**|**Validation**|**Field Type**
 :-----:|:-----:|:-----:|:-----:
@@ -510,17 +510,17 @@ Eternal City Crawls is now running locally on your host.
 
 ### Heroku Deployment:
 
-* 1: <strong>Create</strong> a requirements.txt file using the following command.
+* 1: <strong>Create</strong> a **requirements.txt** file using the following command.
 ```bash
 pip3 freeze > requirements.txt
 ```
 
-* 2: <strong>Create</strong> a procfile with the following command.
+* 2: <strong>Create</strong> a **procfile** with the following command.
 ```bash
 echo web: python3 app.py > Procfile
 ```
 * 3: Push these newly created files to your repository.
-* 4: Create a new app for this project on the Heroku Dashboard.
+* 4: Create a new app for this project on the *Heroku* Dashboard.
 * 5: Select your deployment method by clicking on the deployment method button and select GitHub.
 * 6: On the dashboard, set the following config variables:
 
@@ -537,7 +537,7 @@ AWS\_SECRET\_ACCES\_KEY\_ID|<your\_aws\_secret\_access\_key>
 EMAIL\_HOST\_PASS|<your\_email\_host\_password>
 EMAIL\_HOST\_USER|<your\_email\_host\_user>
 
-* 7: <strong>Click</strong> the deploy button on the heroku Dashboard.
+* 7: <strong>Click</strong> the deploy button on the *Heroku* Dashboard.
 * 8: Wait for the build to finish and click the view project link once build is completed.
 
 At this stage the deployment will be complete.
@@ -546,13 +546,13 @@ At this stage the deployment will be complete.
 
 ## Code
 
-First and Foremost the code is base on Chris Z. implementation of [Boutique Ado](https://github.com/ckz8780/boutique_ado_v1), and significant part of code have been borrowed to implement all the interaction with Stripe Webhook.
+First and Foremost the code is base on **Chris Z**. implementation of [Boutique Ado](https://github.com/ckz8780/boutique_ado_v1), and significant part of code have been borrowed to implement all the interaction with `Stripe Webhook`.
 Then, I took inspiration from many resources on the web for my site, but in a most significant way:
 
 - Structure of the landing page and graphic is inspired by this **startbootstrap** [template](https://startbootstrap.com/themes/landing-page/) 
-- The Responsive multi-item carousel on landing page has been develoed from this [code snippet](https://azmind.com/bootstrap-carousel-multiple-items) and credit goes to Iatek LLC 2018.
+- The Responsive multi-item carousel on landing page has been develoed from this [code snippet](https://azmind.com/bootstrap-carousel-multiple-items) and credit goes to **Iatek LLC 2018**.
 - Cards hovering effect have been adapted by this [code snippet](https://codepen.io/andrewsims/pen/mQoYwz*/).
-- Testimonial section has been adapted from [Marta Szymanska snippet](https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459).
+- Testimonial section has been adapted from **[Marta Szymanska snippet]**(https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459).
 - Project scaffolding has been developed following this [post](https://code.visualstudio.com/docs/python/tutorial-django) on how to develop a Django Project on *VSCode*.
 - Stripe connection and setting have been taken directly from the [official documentation](https://stripe.com/docs)
 
