@@ -1,5 +1,5 @@
 /*------------General------------*/
-@import url("https://fonts.googleapis.com/css?family=Sansita-Swashed|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Sansita|Oswald");
 
 html {
   font-size: 95%;
@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  font-family: 'Sansita-Swashed', 'Lato', 'Helvetica Neue', sans-serif;
+  font-family: 'Sansita', 'Lato', 'Helvetica Neue', sans-serif;
   font-weight: 700;
 } 
 

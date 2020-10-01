@@ -103,8 +103,8 @@ Following color Palette has been adopted; the main background color used is Pana
 
 ### Typography
 I have used some [Google Fonts](https://fonts.google.com/) all over the Website: 
-* I have selected for all titles [Amita](https://fonts.google.com/specimen/Amita), because it seems appropriate for the Fantastic settings many Boardgames have. 
-* I have used also [Satisfy](https://fonts.google.com/specimen/Satisfy) for Brand logo.
+* I have selected for all titles [Oswald](https://fonts.google.com/specimen/Oswald), because it gives a feeling of ancient roman writing. 
+* I have used also [Sansita One](https://fonts.google.com/specimen/Sansita) for Bigger titles, to give an affect of contrast.
 * Beside those, all others font are the build-in Bootstrap ones.
 
 ## Wireframes
