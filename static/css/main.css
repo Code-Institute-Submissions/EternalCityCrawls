@@ -25,6 +25,18 @@ h6 {
   font-weight: 700;
 }
 
+/* overlay  */
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: white;
+  z-index: -1;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -81,10 +93,6 @@ h6 {
     border: 1px solid black !important;
 }
 
-.bg-black {
-    background: #000 !important;
-}
-
 /* --------------------------------- Card Effects---------------*/
 
 .card:hover {
@@ -109,17 +117,7 @@ h6 {
 
 }
 
-/* overlay  */
 
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
-}
 
 /* hover effect on category button */
 
@@ -563,8 +561,6 @@ section.contacts .section-heading p {
 }
 
 
-
-
 /* ------------Tour Detail*/
 
 
@@ -581,7 +577,11 @@ section.contacts .section-heading p {
 }
 
 .empty-cart {
-  height: 40vh;;
+  height: 50vh;;
+}
+
+.all-auth-page {
+  height: 100vh;;
 }
 
 .page-404 {
@@ -755,10 +755,6 @@ section.contacts .section-heading p {
       z-index: 1030;
   }
 
-    .header-container {
-      padding-top: 144px;
-
-    }
   }
 
 @media (min-width: 1200px) {
