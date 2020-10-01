@@ -1,10 +1,27 @@
+/*------------General------------*/
+@import url("https://fonts.googleapis.com/css?family=Sansita-Swashed|Oswald");
 
 html {
-    height: 100%;
+  font-size: 95%;
 }
 
 body {
-    font-family: "Lato";
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-top: 3rem;
+}
+
+h1 {
+  font-family: 'Sansita-Swashed', 'Lato', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+} 
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', 'Lato', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
 }
 
 /* from Bulma */
@@ -65,6 +82,30 @@ body {
 
 .bg-black {
     background: #000 !important;
+}
+
+/* --------------------------------- Card Effects---------------*/
+
+.card:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0em 0.2rem 0.8rem rgba(38, 38, 38, 0.2);
+  top: -0.3em;
+  border: 0.02rem solid #cccccc;
+  background-color: white;
+}
+
+.card-tour{
+  border: 1px solid #000;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+  
+} 
+
+.card-img-top {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+
 }
 
 /* overlay  */
@@ -521,31 +562,10 @@ section.contacts .section-heading p {
 }
 
 
-/* --------------------------------- Card Effects*/
 
-.card:hover {
-  transition: all 0.2s ease-out;
-  box-shadow: 0em 0.2rem 0.8rem rgba(38, 38, 38, 0.2);
-  top: -0.3em;
-  border: 0.02rem solid #cccccc;
-  background-color: white;
-}
 
-.card-tour{
-  border: 1px solid #000;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    border-radius: 2rem;
-  
-} 
+/* ------------Tour Detail*/
 
-.card-img-top {
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-
-}
-
-/* --------------------------------- Tour Detail*/
 
 .tour-detail-section {
   height: 70vh;;
@@ -563,13 +583,15 @@ section.contacts .section-heading p {
   height: 40vh;;
 }
 
-/* --------------------------------- All Auth */
+.page-404 {
+  height: 70vh;;
+}
+
+/* ------------All Auth Customization---------------*/
 
 .allauth-form-inner-content button, .allauth-form-inner-content input[type='submit'] {
   background-color: #1D3557;
 }
-
-
 
 
 /* ------------Media queries Section: Carousels and Navbar---------------*/
