@@ -9,7 +9,7 @@ from .forms import UserProfileForm
 
 @login_required
 def profile(request):
-   """create or update user profile
+    """create or update user profile
     Args:
         request: Http request
     Return:
@@ -39,7 +39,7 @@ def profile(request):
     return render(request, template, context)
 
 def booking_history(request, order_number):
-   """render booking history
+    """render booking history
     Args:
         request: Http request
         order_number: number of the order

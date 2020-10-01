@@ -11,12 +11,12 @@ from .forms import TourForm
 
 
 def all_tours(request):
-   """render all the tours in catalogue
+    """render all the tours in catalogue
     Args:
         request: Http request
     Return:
         render tour page
-    """ 
+    """
 
     tours = Tour.objects.all()
     query = None
@@ -67,7 +67,7 @@ def all_tours(request):
 
 
 def tour_detail(request, tour_id):
-   """render all details of a tour
+    """render all details of a tour
     Args:
         request: Http request
         tour_id: id of tour to visualize
