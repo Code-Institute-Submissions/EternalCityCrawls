@@ -3,13 +3,18 @@
 
 
 
-{% block content %}<main class="error-page">
+{% block content %
     <!-- 500 page -->
-    <div class="overlay bg-tertiary"></div>
-    <h1>Something went wrong!</h1>
-    <p>Error: 500</p>
-    <p>Return back to safety using this button</p>
-    <p>If you got here via the contact form, see README.md for more information</p>
-    <a aria-label="Home" class="btn btn--tertiary " href="{% url 'home' %}">Home</a>
-</main> 
+    <div class="overlay "></div>
+    <div class="container-fluid bg-tertiary error-page page-404">
+        <div class="row">
+            <div class="offset-1 col-11 col-md-6 py-4">
+                <h1>Something went wrong!</h1>
+                <p>Error: 500</p>
+                <p>Return back to safety using this button</p>
+                <p>If you got here via the contact form, see README.md for more information</p>
+                <a aria-label="Home" class="btn btn--tertiary " href="{% url 'home' %}">Home</a>
+            </div>
+        </div>
+    </div>   
 {% endblock %}
