@@ -555,6 +555,7 @@ Then, I took inspiration from many resources on the web for my site, but in a mo
 - Testimonial section has been adapted from **[Marta Szymanska snippet]**(https://mdbootstrap.com/snippets/jquery/marta-szymanska/1301459).
 - Project scaffolding has been developed following this [post](https://code.visualstudio.com/docs/python/tutorial-django) on how to develop a Django Project on *VSCode*.
 - Stripe connection and setting have been taken directly from the [official documentation](https://stripe.com/docs)
+- Custom Color for Hamburger menu has been adapted by this post on [geeksforgeeks](https://www.geeksforgeeks.org/how-to-change-hamburger-toggler-color-in-bootstrap/)
 
 I feel important also to recommend for *Django* the following resources:
 - The tutorial of [Django Girls](https://tutorial.djangogirls.org/en/index.html?ref=hackr.io).
