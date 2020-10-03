@@ -25,8 +25,6 @@ h6 {
   font-weight: 700;
 }
 
-/* overlay  */
-
 .overlay {
   height: 100%;
   width: 100%;
@@ -36,8 +34,6 @@ h6 {
   background: white;
   z-index: -1;
 }
-
-/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -50,9 +46,6 @@ h6 {
     text-transform: uppercase;
 }
 
-.main-logo-link {
-    width: fit-content;
-}
 
 .book-now-button {
     background: #457B9D;
@@ -582,8 +575,7 @@ section.contacts .section-heading p {
 }
 
 
-/* ------------Media queries Section: Carousels and Navbar---------------*/
-
+/* ------------Media queries Section: Carousels and Navbar Settings---------------*/
 
 
 @media (min-width: 576px) {
