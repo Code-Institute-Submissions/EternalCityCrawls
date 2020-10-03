@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="overlay "></div>
-    <div class="container bg-tertiary">
+    <div class="container-fluid bg-tertiary">
         <div class="row">
             <div class="offset-1 col-11 col-md-6 ">
                 <hr>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-7">
+            <div class="offset-1 col-11 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
@@ -164,7 +164,7 @@
             </div>
         </div>
         <div class="row">
-			<div class="col-12 col-lg-7 text-right">
+			<div class="offset-1 col-11 col-lg-7 text-right">
                 {% if from_profile %}
                     <a href="{% url 'profile' %}" class="btn btn-tertiary rounded-0 my-2">
                         <span class="icon mr-2">
