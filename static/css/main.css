@@ -42,15 +42,60 @@ h6 {
     width: 1.5rem;
 }
 
+section {
+  padding: 2rem 0;
+}
+
+section h2 {
+  font-size: 3rem;
+}
+/*------------Background------------*/
+
+.bg-main {
+  background-color: #1D3557;
+}
+
+
+.bg-secondary {
+  background-color: #F1FAEE;
+}
+
+.bg-tertiary{
+  background-color: #A8DADC;
+}
+
+/*------------Text------------*/
+
 .logo-font {
     text-transform: uppercase;
 }
 
+.text-black {
+  color: #000 !important;
+}
+
+.border-black {
+  border: 1px solid black !important;
+}
+
+/*------------Drop Box------------*/
+
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+/*------------Buttons------------*/
 
 .book-now-button {
     background: #457B9D;
     color: white;
-    min-width: 260px;
+    min-width: 17rem;
 }
 
 .btn-black {
@@ -58,12 +103,50 @@ h6 {
     color: white;
 }
 
-.btn-main-colour {
+.btn-nav-colour {
   background: #457B9D;
   color: white;
 }
 
+.btn-main{
+  background-color: #1D3557;
+}
 
+.btn-tertiary{
+  background-color: #457B9D;
+}
+
+.btn-outline-black {
+  background: white;
+  color: black !important; /* use important to override link colors for <a> elements */
+  border: 0.03rem  solid black;
+}
+
+.btn.btn-outline-black.rounded-0,
+.btn.btn-black.rounded-0 {
+    padding: .375rem .375rem;
+}
+
+.btn.btn-outline-black.rounded-0.btn-lg,
+.btn.btn-black.rounded-0.btn-lg {
+    padding: .375rem .375rem;
+    font-size: .75rem;
+}
+
+.btt-button {
+  height: 42px;
+  width: 42px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+}
+
+.increment-qty, .decrement-qty {
+    padding: .25rem .5rem !important;
+}
+
+/*------------Buttons Effects------------*/
 
 .btn-main-colour:hover,
 .btn-main-colour:active,
@@ -78,23 +161,42 @@ h6 {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
+
+.btt-link,
+.update-link,
+.remove-item{
+  cursor: pointer;
 }
 
-.border-black {
-    border: 1px solid black !important;
+
+.btn-outline-black-hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+  background: black;
+  color: white !important;
+}
+/*------------Spinner------------*/
+
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #457B9D;
+    z-index: 9999;
 }
 
-/* --------------------------------- Card Effects---------------*/
-
-.card:hover {
-  transition: all 0.2s ease-out;
-  box-shadow: 0em 0.2rem 0.8rem rgba(38, 38, 38, 0.2);
-  top: -0.3em;
-  border: 0.02rem solid #cccccc;
-  background-color: white;
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
 }
+
+/*------------Card------------*/
 
 .card-tour{
   border: 1px solid #000;
@@ -110,45 +212,27 @@ h6 {
 
 }
 
+.card:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0em 0.2rem 0.8rem rgba(38, 38, 38, 0.2);
+  top: -0.3em;
+  border: 0.02rem solid #cccccc;
+  background-color: white;
+}
 
-
-/* hover effect on category button */
+/*------------Badge------------*/
 
 a.category-badge > span.badge:hover{
     background: #212529 !important;
     color: #fff !important;
 }
 
-/* going to the top button */
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
 
-}
-.btt-link,
-.update-link,
-.remove-item{
-    cursor: pointer;
-}
-/* button wih black border and effect*/
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
+/*------------Toast------------*/
 
-.btn-outline-black-hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
+.custom-toast {
+  overflow: visible;
 }
-
-
-/* ---------toast on top of everything with z */
 
 .message-container {
     position: fixed;
@@ -157,52 +241,40 @@ a.category-badge > span.badge:hover{
     z-index: 99999999999;
 }
 
-.custom-toast {
-    overflow: visible;
-}
-
 .toast-capper {
-    height: 2px;
+  height: 0.12rem;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
+.top-toast{
+  width: 0; 
+  height: 0; 
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent; 
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: -10px;
+  right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
-
-.arrow-success {
+.toast-success {
     border-bottom-color: #28a745 !important;
 }
 
-.arrow-danger {
+.toast-danger {
     border-bottom-color: #dc3545 !important;
 }
 
-.arrow-warning {
+.toast-warning {
     border-bottom-color: #ffc107 !important;
 }
 
-.arrow-info {
+.toast-info {
     border-bottom-color: #17a2b8 !important;
 }
 
 
-.cart-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 
-/* Check out form styling default Stripe*/
+/*------------Stripe Box Styling-----------*/
 
 .StripeElement,
 .stripe-style-input {
@@ -242,38 +314,134 @@ a.category-badge > span.badge:hover{
     border: 1px solid #000;
 } 
 
-/* --------------------------------- Spinner */
 
-#loading-overlay {
-	display: none;
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #457B9D;
-    z-index: 9999;
+/* -------------- Navigation Bar ------------------ */
+
+.display-4.logo-font.text-black {
+  font-size: 2rem;
 }
 
-.loading-spinner {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
-}
-/*---styling drop box ---*/
-select,
-select option {
-    color: #000000;
+.nav-link {
+  padding: 0.15rem;
 }
 
-select:invalid,
-select option[value=""] {
-    color: #aab7c4 !important;
+.nav-link i.fa-lg {
+  font-size: 1rem;
 }
 
-/* Allauth form formatting */
+.navbar-toggler {
+  padding: .6rem .6rem;
+  font-size: 1rem;
+}
+
+.nav-item {
+background-color: #1D3557;
+
+}
+
+.color-contrast {
+color: #e63946;
+}
+
+/* -------------- custom toggler ------------------ */
+
+.custom-toggler .navbar-toggler-icon { 
+background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(230, 57, 70)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+} 
+
+.custom-toggler.navbar-toggler {
+border-color:#e63946;
+} 
+
+/*------------Footer------------*/
+
+footer {
+  padding: 2rem 0;
+  text-align: left;
+  color: #F1FAEE;
+  background-color: #1D3557;
+}
+
+/*------------Landing Section Home Page------------*/
+
+.master-head {
+  position: relative;
+  background-color: #343a40;
+  background: url('/media/cover.jpg') no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.master-head .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.master-head h1 {
+  font-size: 2rem;
+}
+
+
+/*------------Section Hot------------*/
+
+section.hot {
+  background-color: #F1FAEE;
+}
+section.hot .section-heading h3 {
+  margin-top: 0;
+
+}
+
+section.hot .section-heading p {
+  margin-bottom: 0;
+}
+
+/*------------Section Testimonials------------*/
+
+section.testimonials .section-heading h3 {
+margin-top: 0;
+
+}
+
+section.testimonials .section-heading p {
+margin-bottom: 0;
+}
+
+/*------------Section Contact------------*/
+
+section.contacts .section-heading h3 {
+margin-top: 0;
+
+}
+
+section.contacts .section-heading p {
+margin-bottom: 0;
+}
+
+.btn-send {
+color: #FFFFFF;
+width: 100%;
+display: block;
+background-color: #457B9D;
+}
+
+.btn-send:hover {
+color: #FFFFFF;
+background-color: #1D3537;
+}
+
+/*------------Auth application custom formatting------------*/
+
+.all-auth-page {
+  height: 60vh;
+}
 
 input[name='q']::placeholder {
     color: #aab7c4;
@@ -315,8 +483,6 @@ input[name='q']::placeholder {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
-
-    /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
@@ -330,7 +496,14 @@ input[name='q']::placeholder {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
-/*-- Profile Selector --*/
+
+
+.allauth-form-inner-content button, .allauth-form-inner-content input[type='submit'] {
+  background-color: #1D3557;
+}
+
+/*------------Profile Page------------*/
+
 #profile-update-form .form-control {
     color: #000;
 }
@@ -347,14 +520,17 @@ input[name='q']::placeholder {
 #id_default_country option:first-child {
     color: #aab7c4;
 }
-/* --------------------------------- booking history*/
+
+
+/*------------Booking History------------*/
+
 
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
+    max-height: 416px; 
     overflow-y: auto;
 }
 
-/* Tour Form Styling */
+/*------------Tour Update------------*/
 
 .btn-file {
     position: relative;
@@ -382,196 +558,33 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* -------------- custom toggler ------------------ */
-
-.custom-toggler .navbar-toggler-icon { 
-  background-image: url( 
-"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(230, 57, 70)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
-} 
-
-.custom-toggler.navbar-toggler {
-  border-color:#e63946;
-} 
-
-
-/* -------------- Adjusting Navigation Bar ------------------ */
-
-.display-4.logo-font.text-black {
-    font-size: 2rem;
-}
-
-.nav-link {
-    padding: 0.15rem;
-}
-
-.nav-link i.fa-lg {
-    font-size: 1rem;
-}
-
-.navbar-toggler {
-    padding: .6rem .6rem;
-    font-size: 1rem;
-}
-
-/* -------------- Padding Buttons ------------------ */
-
-.btn.btn-outline-black.rounded-0,
-.btn.btn-black.rounded-0 {
-    padding: .375rem .375rem;
-}
-
-.btn.btn-outline-black.rounded-0.btn-lg,
-.btn.btn-black.rounded-0.btn-lg {
-    padding: .375rem .375rem;
-    font-size: .75rem;
-}
-
-.increment-qty, .decrement-qty {
-    padding: .25rem .5rem !important;
-}
-/*------------Landing ------------*/
-
-.master-head {
-    position: relative;
-    background-color: #343a40;
-    background: url('/media/cover.jpg') no-repeat center center;
-    background-size: cover;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-  
-  .master-head .overlay {
-    position: absolute;
-    background-color: #212529;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-  }
-  
-  .master-head h1 {
-    font-size: 2rem;
-  }
-
-footer {
-    padding: 2rem 0;
-    text-align: left;
-    color: #F1FAEE;
-    background-color: #1D3557;
-  }
-/*------------Generic for Section------------*/
-
-section {
-    padding: 2rem 0;
-  }
-  
-  section h2 {
-    font-size: 3rem;
-  }
-/*------------Section Hot------------*/
-
-section.hot {
-    background-color: #F1FAEE;
-}
-section.hot .section-heading h3 {
-    margin-top: 0;
-
-  }
-  
-  section.hot .section-heading p {
-    margin-bottom: 0;
-  }
-
-/*------------Section Testimonials------------*/
-
-section.testimonials .section-heading h3 {
-  margin-top: 0;
-
-}
-
-section.testimonials .section-heading p {
-  margin-bottom: 0;
-}
-
-/*------------Section Contact------------*/
-
-section.contacts .section-heading h3 {
-  margin-top: 0;
-
-}
-
-section.contacts .section-heading p {
-  margin-bottom: 0;
-}
-
-.btn-send {
-  color: #FFFFFF;
-  width: 100%;
-  display: block;
-  background-color: #457B9D;
-}
-
-.btn-send:hover {
-  color: #FFFFFF;
-  background-color: #1D3537;
-}
-
-/*------------nav------------*/
-
-.bg-main {
-  background-color: #1D3557;
-}
-
-.bg-secondary {
-  background-color: #F1FAEE;
-}
-
-.bg-tertiary{
-  background-color: #A8DADC;
-}
-
-.nav-item {
-  background-color: #1D3557;
-
-}
-
-.color-contrast {
-  color: #e63946;
-}
-
-
-/* ------------Tour Detail*/
-
+/*------------Tour Detail------------*/
 
 .tour-detail-section {
-  height: 70vh;;
+  height: 70vh;
 }
 
-.btn-main{
-  background-color: #1D3557;
-}
+/*------------Cart Page------------*/
 
-.btn-tertiary{
-  background-color: #457B9D;
-}
 
 .empty-cart {
-  height: 50vh;;
+  height: 50vh;
 }
 
-.all-auth-page {
-  height: 60vh;;
+.min-height-cart {
+  min-height: 50vh;
 }
+
+.cart-notification-wrapper {
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*------------Error Page------------*/
 
 .page-404 {
-  height: 70vh;;
-}
-
-/* ------------All Auth Customization---------------*/
-
-.allauth-form-inner-content button, .allauth-form-inner-content input[type='submit'] {
-  background-color: #1D3557;
+  height: 70vh;
 }
 
 
